@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee:100,200,300,400,500,600,700|Teko:100,200,300,400,500,600,700|Roboto:100,200,300,400,500,600,700');
+/*font-family: 'Bungee', cursive;
+font-family: 'Teko', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+Hex	    RGB          Color
+#ff3939	(255,57,57)  red
+#00ce00	(0,206,0)    green
+#ffce29	(255,206,41) yellow
+#00deff	(0,222,255)  blue
+#007b4a	(0,123,74)   dark green
+
+*/
+
+
+
+body {
+  height: 150vh;
+  max-height: 150vh;
+ 
+
+  color: #fff;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  
+  background-attachment: fixed;
+}
+
+h1 {
+   font-family: 'Bungee', cursive;
+   color:#fff;
+}
+
+.tile1, .tile2, .tile3, .tile4, .tile5, .tile6, .tile7, .tile8, .tile9, .tile10, .tile11, .tile12, .tile13, .tile14, .tile15, .tile16{
+  
+   cursor: pointer;
+  
+}
+
+.opacity{
+    opacity: 0.6 ;
+}
+.tile16 {background: white;}
+
+
+
+
+.container {
+    margin-top:50px;
+    
+}
+.table-bordered {
+     margin-top:50px;
+ height:300px;
+ width:300px;
+ border: 7px solid white;
+ cursor: pointer;
+  box-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
+  }
+  
+  .block{
+      padding: 10px;
+  }
+.block, .block_rules, .block_control, .block_game_field{
+    background-color:#ffce29;
+    text-align:center;
+    font-family: 'Teko', sans-serif;
+   font-size:40px;
+     text-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
+     color:#fff;
+     
+     border: 7px solid white;
+       box-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
+}
+.block, .block_rules, .block_control{
+    border-bottom: 3px solid white;
+}
+.block_rules, .block_control, .block_game_field{
+    border-top:3px solid white;
+}
+.btn-outline-light {
+    background-color:#ffce29;
+    border:none;
+   font-family: 'Teko', sans-serif;
+   font-size:40px;
+    text-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
+     color:#fff;
+     margin-right:10px;
+     margin-left:10px;
+    }
+.fas{
+    font-size:30px;
+    text-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
+     color:#fff;
+}
+
+
+.block_text{
+    padding: 5px;
+    background-color:#e5fbff;
+    text-align:center;
+     font-family: 'Teko', sans-serif;
+     font-weight:100;
+      font-size: 27px;
+     color:#000;
+     border-radius: 3px;
+     border: 7px solid white;
+}
+
+.dashboard-btn{
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    border: 3px solid #fff;
+    position: cover;  
+ box-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
+}
+
+
+   #numbers{
+       background-image: url("../images/icons/numbers_icon.png");
+       margin-right:10px;
+       margin-left:10px;
+   }
+   #mario{
+        background-image: url("../images/icons/mario_icon.png");
+        margin-right:10px;
+        margin-left:10px;
+   }
+   #mario_toad{
+       background-image: url("../images/icons/mario_toad_icon.png");
+       margin-right:10px;
+       margin-left:10px;
+   }
+   #mario_team{
+        background-image: url("../images/icons/mario_team_icon.png");
+        margin-right:10px;
+        margin-left:10px;
+   }
+.tile1{
+
+background: url("../images/numbers/001.png");
+background-size: cover;
+}
+.tile2{
+background: url("../images/numbers/002.png");
+background-size: cover;
+}
+.tile3{
+background: url("../images/numbers/003.png");
+background-size: cover;
+}
+.tile4{
+background: url("../images/numbers/004.png");
+background-size: cover;
+
+}
+.tile5{
+background: url("../images/numbers/005.png");
+background-size: cover;
+}
+.tile6{
+background: url("../images/numbers/006.png");
+background-size: cover;
+}
+.tile7{
+background: url("../images/numbers/007.png");
+background-size: cover;
+
+}
+.tile8{
+background: url("../images/numbers/008.png");
+background-size: cover;
+}
+.tile9{
+background: url("../images/numbers/009.png");
+background-size: cover;
+}
+.tile10{
+background: url("../images/numbers/010.png");
+background-size: cover;
+
+}
+.tile11{
+background: url("../images/numbers/011.png");
+background-size: cover;
+}
+.tile12{
+background: url("../images/numbers/012.png");
+background-size: cover;
+}
+.tile13{
+background: url("../images/numbers/013.png");
+background-size: cover;
+}
+.tile14{
+background: url("../images/numbers/014.png");
+background-size: cover;
+}
+.tile15{
+background: url("../images/numbers/015.png");
+background-size: cover;
+}
+.tile16{
+background-color: white;
+ opacity: 0.5;
+}
+
+/*  Class MARIO  */
+
+.mario01{
+  background: url(".../images/puzzle_img/Mario.png");
+  background-position: left top;
+}
+.mario02{
+  background: url(".../images/puzzle_img/Mario.png");  
+}
+.mario03{
+  background: url(".../images/puzzle_img/Mario.png");  
+}
+.mario04{
+  background: url(".../images/puzzle_img/Mario.png");  
+}
+
+.mario05{
+  background: url(".../images/puzzle_img/Mario.png");  
+}
+.mario06{
+  background: url(".../images/puzzle_img/Mario.png");  
+}
+.mario07{
+  background: url(".../images/puzzle_img/Mario.png");  
+}
+.mario08{
+  background: url(".../images/puzzle_img/Mario.png");  
+}
+.mario09{
+  background: url(".../images/puzzle_img/Mario.png");  
+}
+
+.mario010{
+  background: url(".../images/puzzle_img/Mario.png");  
+}
+
+.mario011{
+  background: url(".../images/puzzle_img/Mario.png");  
+}
+.mario012{
+  background: url(".../images/puzzle_img/Mario.png");  
+}
+.mario013{
+  background: url(".../images/puzzle_img/Mario.png");  
+}
+.mario014{
+  background: url(".../images/puzzle_img/Mario.png");  
+}
+.mario015{
+  background: url(".../images/puzzle_img/Mario.png");  
+}
+
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { ... }
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+  .table-bordered {
+    width:350px;
+    height:350px;
+    margin:auto;
+  } }
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { .table-bordered {
+    width:450px;
+    height:450px;
+  } }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { ... }
