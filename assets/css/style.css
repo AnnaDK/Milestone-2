@@ -33,30 +33,36 @@ h1 {
    font-family: 'Bungee', cursive;
    color:#fff;
 }
+.container {
+    margin-top:50px;
+}
 
 .tile1, .tile2, .tile3, .tile4, .tile5, .tile6, .tile7, .tile8, .tile9, .tile10, .tile11, .tile12, .tile13, .tile14, .tile15, .tile16{
   
    cursor: pointer;
+ }
+ 
+ .tile16 {background: white;}
+.disabled {
   
+   color: #f8f9fa;
+  background-color: transparent;
 }
 
-.opacity{
+/*.opacity{
     opacity: 0.6 ;
+}*/
+
+.displayNone {
+	display: none;
 }
-.tile16 {background: white;}
 
-
-
-
-.container {
-    margin-top:50px;
-    
-}
 .table-bordered {
      margin-top:50px;
  height:300px;
  width:300px;
  border: 7px solid white;
+ 
  cursor: pointer;
   box-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
   }
@@ -118,7 +124,9 @@ h1 {
     position: cover;  
  box-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
 }
-
+.red{
+    border-color: red 5px solid;
+}
 
    #numbers{
        background-image: url("../images/icons/numbers_icon.png");
@@ -209,56 +217,117 @@ background-color: white;
  opacity: 0.5;
 }
 
-/*  Class MARIO  */
+/*  Class Mario  */
+.mario01, .mario02, .mario03, .mario04, .mario05, .mario06, .mario07, .mario08, .mario09, .mario010, .mario011, .mario012, .mario013, .mario014, .mario015 
 
-.mario01{
-  background: url(".../images/puzzle_img/Mario.png");
-  background-position: left top;
+{height: 25%;
+width:25%;
+     background: url("../images/puzzle_img/mario.png");
+      display: table-cell;
+    border: 1px solid white;
+  }
+/* Class Mario_3x3*/
+.mario01_3x3, .mario02_3x3, 
+.mario03_3x3, .mario04_3x3, .mario05_3x3, .mario06_3x3, .mario07_3x3, .mario08_3x3
+.mario01_3x3{
+   
+     background: url("../images/puzzle_img/mario.png");
+     
+    border: 1px solid white;
 }
-.mario02{
-  background: url(".../images/puzzle_img/Mario.png");  
+.mario01_3x3{
+    background-position: left top;
 }
-.mario03{
-  background: url(".../images/puzzle_img/Mario.png");  
+.mario02_3x3{
+    background-position: center top;
 }
-.mario04{
-  background: url(".../images/puzzle_img/Mario.png");  
+.mario03_3x3{
+   background-position: right top; 
+}
+.mario04_3x3{
+  background-position: left center;  
+}
+.mario05_3x3{
+    background-position: center center;
+}
+.mario06_3x3{
+   background-position: right center; 
+}
+.mario07_3x3{
+    background-position: left bottom;
+}
+.mario08_3x3{
+    background-position: center bottom;
 }
 
-.mario05{
-  background: url(".../images/puzzle_img/Mario.png");  
-}
-.mario06{
-  background: url(".../images/puzzle_img/Mario.png");  
-}
-.mario07{
-  background: url(".../images/puzzle_img/Mario.png");  
-}
-.mario08{
-  background: url(".../images/puzzle_img/Mario.png");  
-}
-.mario09{
-  background: url(".../images/puzzle_img/Mario.png");  
+/*  Class Mario_team  */
+.mario_team01, .mario_team02, .mario_team03, .mario_team04, .mario_team05, .mario_team06, .mario_team07, .mario_team08, .mario_team09, .mario_team010, .mario_team011, .mario_team012, .mario_team013, .mario_team014, .mario_team015{
+   background: url("../images/puzzle_img/mario_team.jpg"); 
 }
 
-.mario010{
-  background: url(".../images/puzzle_img/Mario.png");  
+.mario01,.mario_team01 {
+ 
+  background-position: 12% 0%;
+}
+.mario02,.mario_team02{
+   
+  background-position: 37% 0%;  
+}
+.mario03,.mario_team03{
+     
+ background-position:   62% 0%; 
+}
+.mario04,.mario_team04{
+     
+  background-position:  87% 0%;  
 }
 
-.mario011{
-  background: url(".../images/puzzle_img/Mario.png");  
+.mario05,.mario_team05{
+ 
+  background-position: 12% 37%;  
 }
-.mario012{
-  background: url(".../images/puzzle_img/Mario.png");  
+.mario06,.mario_team06{
+ 
+  background-position: 37% 37%; 
 }
-.mario013{
-  background: url(".../images/puzzle_img/Mario.png");  
+.mario07,.mario_team07{
+    width: 25%;
+  height: 25%;
+  background-position: 62% 37%; 
 }
-.mario014{
-  background: url(".../images/puzzle_img/Mario.png");  
+.mario08,.mario_team08{
+   
+  background-position: 87% 37%; 
 }
-.mario015{
-  background: url(".../images/puzzle_img/Mario.png");  
+.mario09,.mario_team09{
+  
+  background-position: 12% 62%;  
+}
+
+.mario010,.mario_team010{
+  
+  background-position: 37% 62%; 
+}
+
+.mario011,.mario_team011{
+   
+  background-position: 62% 62%;
+}
+.mario012,.mario_team012{
+   
+  background-position: 87% 62%;
+}
+.mario013,.mario_team013{
+
+  background-position: 12% 87%;
+}
+.mario014,.mario_team014{
+ 
+  background-position: 37% 87%;   
+}
+.mario015,.mario_team015{
+   
+  background-position: 62% 87%;
 }
 
 
