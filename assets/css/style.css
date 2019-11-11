@@ -15,38 +15,31 @@ Hex	    RGB          Color
 
 
 body {
-  height: 150vh;
-  max-height: 150vh;
- 
-
-  color: #fff;
-  background-image: url("../images/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
-  
-  background-attachment: fixed;
+    height: 150vh;
+    max-height: 150vh;
+    background-image: url("../images/background/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 h1 {
-   font-family: 'Bungee', cursive;
-   color:#fff;
-}
-.container {
-    margin-top:50px;
+    font-family: 'Bungee', cursive;
+    color: #fff;
+    font-size: 25px;
 }
 
-.tile1, .tile2, .tile3, .tile4, .tile5, .tile6, .tile7, .tile8, .tile9, .tile10, .tile11, .tile12, .tile13, .tile14, .tile15, .tile16{
-  
-   cursor: pointer;
- }
- 
- .tile16 {background: white;}
+.container {
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
 .disabled {
-  
-   color: #f8f9fa;
-  background-color: transparent;
+    color: #f8f9fa;
+    background-color: transparent;
 }
 
 /*.opacity{
@@ -54,299 +47,188 @@ h1 {
 }*/
 
 .displayNone {
-	display: none;
+    display: none;
 }
 
-.table-bordered {
-     margin-top:50px;
- height:300px;
- width:300px;
- border: 7px solid white;
- 
- cursor: pointer;
-  box-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
-  }
-  
-  .block{
-      padding: 10px;
-  }
-.block, .block_rules, .block_control, .block_game_field{
-    background-color:#ffce29;
-    text-align:center;
+
+
+
+ #sortable {
+    margin-top: 10px;
+
+    width: 300px;
+    height: 300px;
+    
+    box-shadow: 0 5px 5px rgba(7, 7, 7, 0.99);
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+
+
+.block {
+    margin-top: 20px;
+}
+
+.block,
+#levelPanel,
+.block_rules,
+.block_control,
+.block_game_field
+{
+    background-color: #ffce29;
+    text-align: center;
     font-family: 'Teko', sans-serif;
-   font-size:40px;
-     text-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
-     color:#fff;
-     
-     border: 7px solid white;
-       box-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
+    font-size: 30px;
+    text-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
+    color: #fff;
+    border: 4px solid white;
+    box-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
-.block, .block_rules, .block_control{
-    border-bottom: 3px solid white;
+
+#sortable {
+    padding-top: 10px;
+    box-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
 }
-.block_rules, .block_control, .block_game_field{
-    border-top:3px solid white;
+
+.block_game_field{
+    padding-top: 10px;
 }
+
+
 .btn-outline-light {
-    background-color:#ffce29;
-    border:none;
-   font-family: 'Teko', sans-serif;
-   font-size:40px;
-    text-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
-     color:#fff;
-     margin-right:10px;
-     margin-left:10px;
-    }
-.fas{
-    font-size:30px;
-    text-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
-     color:#fff;
+    background-color: #ffce29;
+    border: none !important;
+    font-family: 'Teko', sans-serif;
+    font-size: 30px;
+    text-shadow: 0 4px 2px rgba(7, 7, 7, 0.99);
+    color: #fff;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.btn-outline-light:hover {
+    background-color: #e5b924;
+    color: #fff !important;
+}
+
+.btn-outline-light:active {
+    background-color: #e5b924;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 
-.block_text{
+
+.block_text {
     padding: 5px;
-    background-color:#e5fbff;
-    text-align:center;
-     font-family: 'Teko', sans-serif;
-     font-weight:100;
-      font-size: 27px;
-     color:#000;
-     border-radius: 3px;
-     border: 7px solid white;
+    background-color: #e5fbff;
+    text-align: center;
+    font-family: 'Teko', sans-serif;
+    font-weight: 100;
+    font-size: 27px;
+    color: #000;
+    border-radius: 3px;
+    border: 7px solid white;
 }
 
-.dashboard-btn{
+.dashboard-btn {
+
     height: 100px;
     width: 100px;
     border-radius: 5px;
     border: 3px solid #fff;
-    position: cover;  
- box-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
-}
-.red{
-    border-color: red 5px solid;
+    box-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
+    margin-left: auto;
+    margin-right: auto;
 }
 
-   #numbers{
-       background-image: url("../images/icons/numbers_icon.png");
-       margin-right:10px;
-       margin-left:10px;
-   }
-   #mario{
-        background-image: url("../images/icons/mario_icon.png");
-        margin-right:10px;
-        margin-left:10px;
-   }
-   #mario_toad{
-       background-image: url("../images/icons/mario_toad_icon.png");
-       margin-right:10px;
-       margin-left:10px;
-   }
-   #mario_team{
-        background-image: url("../images/icons/mario_team_icon.png");
-        margin-right:10px;
-        margin-left:10px;
-   }
-.tile1{
-
-background: url("../images/numbers/001.png");
-background-size: cover;
-}
-.tile2{
-background: url("../images/numbers/002.png");
-background-size: cover;
-}
-.tile3{
-background: url("../images/numbers/003.png");
-background-size: cover;
-}
-.tile4{
-background: url("../images/numbers/004.png");
-background-size: cover;
-
-}
-.tile5{
-background: url("../images/numbers/005.png");
-background-size: cover;
-}
-.tile6{
-background: url("../images/numbers/006.png");
-background-size: cover;
-}
-.tile7{
-background: url("../images/numbers/007.png");
-background-size: cover;
-
-}
-.tile8{
-background: url("../images/numbers/008.png");
-background-size: cover;
-}
-.tile9{
-background: url("../images/numbers/009.png");
-background-size: cover;
-}
-.tile10{
-background: url("../images/numbers/010.png");
-background-size: cover;
-
-}
-.tile11{
-background: url("../images/numbers/011.png");
-background-size: cover;
-}
-.tile12{
-background: url("../images/numbers/012.png");
-background-size: cover;
-}
-.tile13{
-background: url("../images/numbers/013.png");
-background-size: cover;
-}
-.tile14{
-background: url("../images/numbers/014.png");
-background-size: cover;
-}
-.tile15{
-background: url("../images/numbers/015.png");
-background-size: cover;
-}
-.tile16{
-background-color: white;
- opacity: 0.5;
+.dashboard-btn:hover {
+    opacity: 0.7;
 }
 
-/*  Class Mario  */
-.mario01, .mario02, .mario03, .mario04, .mario05, .mario06, .mario07, .mario08, .mario09, .mario010, .mario011, .mario012, .mario013, .mario014, .mario015 
-
-{height: 25%;
-width:25%;
-     background: url("../images/puzzle_img/mario.png");
-      display: table-cell;
-    border: 1px solid white;
-  }
-/* Class Mario_3x3*/
-.mario01_3x3, .mario02_3x3, 
-.mario03_3x3, .mario04_3x3, .mario05_3x3, .mario06_3x3, .mario07_3x3, .mario08_3x3
-.mario01_3x3{
-   
-     background: url("../images/puzzle_img/mario.png");
-     
-    border: 1px solid white;
-}
-.mario01_3x3{
-    background-position: left top;
-}
-.mario02_3x3{
-    background-position: center top;
-}
-.mario03_3x3{
-   background-position: right top; 
-}
-.mario04_3x3{
-  background-position: left center;  
-}
-.mario05_3x3{
-    background-position: center center;
-}
-.mario06_3x3{
-   background-position: right center; 
-}
-.mario07_3x3{
-    background-position: left bottom;
-}
-.mario08_3x3{
-    background-position: center bottom;
-}
-
-/*  Class Mario_team  */
-.mario_team01, .mario_team02, .mario_team03, .mario_team04, .mario_team05, .mario_team06, .mario_team07, .mario_team08, .mario_team09, .mario_team010, .mario_team011, .mario_team012, .mario_team013, .mario_team014, .mario_team015{
-   background: url("../images/puzzle_img/mario_team.jpg"); 
-}
-
-.mario01,.mario_team01 {
- 
-  background-position: 12% 0%;
-}
-.mario02,.mario_team02{
-   
-  background-position: 37% 0%;  
-}
-.mario03,.mario_team03{
-     
- background-position:   62% 0%; 
-}
-.mario04,.mario_team04{
-     
-  background-position:  87% 0%;  
-}
-
-.mario05,.mario_team05{
- 
-  background-position: 12% 37%;  
-}
-.mario06,.mario_team06{
- 
-  background-position: 37% 37%; 
-}
-.mario07,.mario_team07{
-    width: 25%;
-  height: 25%;
-  background-position: 62% 37%; 
-}
-.mario08,.mario_team08{
-   
-  background-position: 87% 37%; 
-}
-.mario09,.mario_team09{
-  
-  background-position: 12% 62%;  
-}
-
-.mario010,.mario_team010{
-  
-  background-position: 37% 62%; 
-}
-
-.mario011,.mario_team011{
-   
-  background-position: 62% 62%;
-}
-.mario012,.mario_team012{
-   
-  background-position: 87% 62%;
-}
-.mario013,.mario_team013{
-
-  background-position: 12% 87%;
-}
-.mario014,.mario_team014{
- 
-  background-position: 37% 87%;   
-}
-.mario015,.mario_team015{
-   
-  background-position: 62% 87%;
+.dashboard-btn:active {
+    opacity: 0.7;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 
-/* Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) { ... }
+
+
+
+
+
+
+
+
+
+#mario {
+    background-image: url("../images/icons/mario_icon.png");
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#mario_toad {
+    background-image: url("../images/icons/mario_toad_icon.png");
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#mario_team {
+    background-image: url("../images/icons/mario_team_icon.png");
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+@media (min-width: 576px) {
+   #sortable{
+        width: 300px;
+        height: 300px;
+        margin: auto;
+    }
+    
+}
 
 /*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) { 
-  .table-bordered {
-    width:350px;
-    height:350px;
-    margin:auto;
-  } }
+
+@media (min-width: 768px) {
+  #sortable{
+        width: 350px;
+        height: 350px;
+        margin: auto;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    .block,
+    .btn-outline-light,
+    .block_control {
+
+        font-size: 40px;
+    }
+    .fa-volume-up,
+    .fa-volume-mute {
+        font-size: 25px;
+    }
+}
 
 /*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) { .table-bordered {
-    width:450px;
-    height:450px;
-  } }
+
+@media (min-width: 992px) {
+  #sortable {
+        width: 450px;
+        height: 450px;
+    }
+}
 
 /* Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) { ... }
+
+@media (min-width: 1200px) {}
