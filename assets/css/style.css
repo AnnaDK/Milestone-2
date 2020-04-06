@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Bungee:100,200,300,400,500,600,700|Teko:100,200,300,400,500,600,700|Roboto:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Bungee:100,200,300,400,500,600,700|Oxanium:100,200,300,400,500,600,700|Roboto:100,200,300,400,500,600,700') ;
 /*font-family: 'Bungee', cursive;
 font-family: 'Teko', sans-serif;
 font-family: 'Roboto', sans-serif;
+font-family: 'Fredoka One', cursive;
 Hex	    RGB          Color
 #ff3939	(255,57,57)  red
 #00ce00	(0,206,0)    green
@@ -10,236 +11,280 @@ Hex	    RGB          Color
 #007b4a	(0,123,74)   dark green
 */
 
-
-
 body {
-    height: 150vh;
-    max-height: 150vh;
-    background-image: url("../images/background/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+     height : 150vh;
+     max-height : 150vh;
+     background-image : url("../images/background.jpg");
+     background-repeat : no-repeat;
+     background-size : cover;
+     background-position : center;
+     background-attachment : fixed;
+     margin-left: 0;
+     margin-right: 0; 
+     
 }
-
-h1 {
-    font-family: 'Bungee', cursive;
-    color: #fff;
-    font-size: 25px;
-}
-
 .container {
-    margin-top: 20px;
-    margin-right: auto;
-    margin-left: auto;
-
-}
-.game_field {
-    display: inline-block;
-    margin: auto;
-    width: 95%;
-    vertical-align: top;
-}
-.disabled {
-    color: #f8f9fa;
-    background-color: transparent;
+     margin: auto;
+     padding: 0;
+     display: flex;
+     flex-flow: column wrap;
+     justify-content:center;
+     align-items:stretch;
+     cursor: pointer;
+   }
+ .item{
+     flex: 1 0;
+     align-self:stretch;
 }
 
-/*.opacity{
-    opacity: 0.6 ;
-}*/
+.heading {
+     margin-top: 15px;
+     margin-left: auto;
+     margin-right: auto;
+     padding: 0;
+     width: 100%;
+     background-color : #ffce29;
+     text-align : center;
+     font-family : 'Bungee', cursive;
+     color : #fff;
+     font-size : 25px;
+     letter-spacing : 2px;
+     word-spacing : 4px;
+     text-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
+     border : white solid 4px;
+     border-radius: 2px;
+     box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
+}
 
-.displayNone {
-    display: none;
+.footer {
+    height: 50px;
+    font-size : 25px;
+    text-align : center;
+    text-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
+border : white solid 4px;
+border-radius: 2px;
+box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
+    color : #fff;
+    background-color : #ffce29;
+ margin-top: 10px;
+     margin-left: auto;
+     margin-right: auto;
+}
+/*----------------------------List group--*/
+.list-group{
+     margin-top : 20px;
+     margin-bottom: 0;
+     margin-left: auto;
+     margin-right: auto;
+}
+.fab{
+    padding:0;
+    margin: 0;
+}
+
+span {
+margin-left : 5px;
 }
 
 
+.list-group{
+    margin-top : 20px;
+}
+.list-group-item {
+background-color : #ffce29 !important ;
+text-align: center;
+font-family: 'Oxanium', cursive;
+font-weight: 600;
+font-size : 30px;
+text-shadow: 0 5px 4px rgba(7, 7, 7, 0.99);
+color : white;
+border : white solid 4px !important ;
+box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
 
+}
 
+/*-----------------------------------Puzzle-Sortable */
 #sortable {
-    border:2px solid #a46;
-    list-style-type: none;
-    display: inline-block;
-    margin: 10px;
-    padding: 0;
-    width: 400px;
+     list-style-type : none;
+     padding : 0;
+     width : 400px;
+     cursor : pointer;
+     margin-top : 20px;
+     margin-bottom: 0;
+     margin-left: auto;
+     margin-right: auto;
+     
 }
 
-    #collage #sortable li {
-        background-size: 400% 400%;
-        border: none;
-        cursor: pointer;
-        margin: 0;
-        padding: 0;
-        float: left;
-        width: 100px;
-        height: 100px;
-    }
-
-
-
-
-
-.block {
-    margin-top: 20px;
+#sortable li {
+     background-size : 400% 400%;
+     border : white solid 0.5px;
+     padding :20px;
+     margin : -0.5px;
+     float : left;
+     cursor : pointer;
 }
-
-.block,
-#levelPanel,
-.block_rules,
-.block_control,
-.block_game_field
-{
-    background-color: #ffce29;
-    text-align: center;
-    font-family: 'Teko', sans-serif;
-    font-size: 30px;
-    text-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
-    color: #fff;
-    border: 4px solid white;
-    box-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
-    margin-bottom: 10px;
-    margin-right: 20px;
-    margin-left: 20px;
-}
-
-#sortable {
-    padding-top: 10px;
-    box-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
-}
-
-.block_game_field{
-    padding-top: 10px;
-}
-
-
-.btn-outline-light {
-    background-color: #ffce29;
-    border: none !important;
-    font-family: 'Teko', sans-serif;
-    font-size: 30px;
-    text-shadow: 0 4px 2px rgba(7, 7, 7, 0.99);
-    color: #fff;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-.btn-outline-light:hover {
-    background-color: #e5b924;
-    color: #fff !important;
-}
-
-.btn-outline-light:active {
-    background-color: #e5b924;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-
-
-
-.block_text {
-    padding: 5px;
-    background-color: #e5fbff;
-    text-align: center;
-    font-family: 'Teko', sans-serif;
-    font-weight: 100;
-    font-size: 27px;
-    color: #000;
-    border-radius: 3px;
-    border: 7px solid white;
-}
-
+/*------------------------------------Buttons*/
 .dashboard-btn {
-
-    height: 100px;
-    width: 100px;
-    border-radius: 5px;
-    border: 3px solid #fff;
-    box-shadow: 0 4px 4px rgba(7, 7, 7, 0.99);
-    margin-left: auto;
-    margin-right: auto;
+height : 100px;
+width : 100px;
+border-radius : 5px;
+border : #fff solid 3px;
+box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
+margin-left : auto;
+margin-right : auto;
+transform : translateY(4px);
 }
 
 .dashboard-btn:hover {
-    opacity: 0.7;
+opacity : 0.7;
 }
 
 .dashboard-btn:active {
-    opacity: 0.7;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+opacity : 0.7;
+box-shadow : 0 5px #666;
+transform : translateY(6px);
+}
+
+.btn-outline-light {
+border : none !important ;
+font-family : 'Teko', sans-serif;
+text-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
+color : #fff;
+}
+
+.btn-outline-light:hover {
+border : none !important ;
+background-color : #FFDC69 !important ;
+text-shadow : 0 4px 4px rgb(7, 7, 7, 0.99);
+color : #fff !important ;
+}
+
+.btn-outline-light:active {
+border : none !important ;
+opacity : 0.7;
+box-shadow : 0 5px #666;
+transform : translateY(6px);
+}
+.btn-light{
+    border: 2px solid rgba(0, 0, 0, 0.616);
+     margin-top: 15px;
+     font-family: 'Oxanium', cursive;
+     text-shadow : 0 3px 3px rgba(131, 119, 119, 0.534);
+     color: black;
+     font-size: 35px;;
+     font-weight: 400;
+}
+
+.playAgain:active {
+box-shadow : 0 5px #666;
+transform : translateY(6px);
+}
+
+.playAgain:hover {
+opacity : 0.7;
+}
+#time, #steps {
+     padding-top: 5px;   
+}
+
+.fas{
+font-size : 30px;
+margin: 2px;
+padding: 2px;
+
+}
+
+label {
+margin-left : 5px;
 }
 
 
 
-
-
-
-
-
-
-
-
+/*---------------------------------------------Dashboard Icons*/
 #mario {
-    background-image: url("../images/icons/mario_icon.png");
-    margin-right: 10px;
-    margin-left: 10px;
+background-image : url("../images/icons/mario_icon.png");
+margin-right : 10px;
+margin-left : 10px;
 }
 
 #mario_toad {
-    background-image: url("../images/icons/mario_toad_icon.png");
-    margin-right: 10px;
-    margin-left: 10px;
+background-image : url("../images/icons/mario_toad_icon.png");
+margin-right : 10px;
+margin-left : 10px;
 }
 
 #mario_team {
-    background-image: url("../images/icons/mario_team_icon.png");
-    margin-right: 10px;
-    margin-left: 10px;
+background-image : url("../images/icons/mario_team_icon.png");
+margin-right : 10px;
+margin-left : 10px;
 }
 
-
-@media (min-width: 576px) {
-   #sortable{
-        width: 300px;
-        height: 300px;
-        margin: auto;
-    }
-    
+#mario_luigi {
+background-image : url("../images/icons/mario_luigi_icon.png");
+margin-right : 10px;
+margin-left : 10px;
 }
-
-/*Medium devices (tablets, 768px and up)*/
-
-@media (min-width: 768px) {
-  #sortable{
-        width: 350px;
-        height: 350px;
-        margin: auto;
-    }
-    h1 {
-        font-size: 40px;
-    }
-    .block,
-    .btn-outline-light,
-    .block_control {
-
-        font-size: 40px;
-    }
-    .fa-volume-up,
-    .fa-volume-mute {
-        font-size: 25px;
-    }
+/*--------------------------------------------------------GameOver*/
+/*--------------------------------------------------------GameOver*/
+.puzzleCompleted_style {
+     background-color : #ffce29;
+     padding : 10px 10px 20px 10px;
+     text-align : center;
+     font-family: 'Oxanium', cursive;
+     font-weight: 600;
+     font-size : 30px;
+     text-shadow : 2px 4px 4px rgb(7, 7, 7, 0.99);
+     color : #fff;
+     border : white solid 4px;
+     width : 400px;
+     height : 400px;
+     margin-left: auto;
+     margin-right: auto;
+     
 }
+/*---------------------------------------------Modal----*/
+ 
+.modal {
+    display: flex;
 
-/*Large devices (desktops, 992px and up)*/
-
-@media (min-width: 992px) {
-  #sortable {
-        width: 450px;
-        height: 450px;
-    }
 }
+ .modal-content {
+     padding : 10px 10px 10px 10px;
+     background-color : #ffce29;
+     text-align : center;
+     font-family: 'Oxanium', cursive;
+     font-weight: 600;
+     font-size : 30px;
+     text-shadow : 2px 4px 4px rgb(7, 7, 7, 0.99);
+     color : #fff;
+     border : white solid 4px;
+ }
+ .modal-content .fas {
+     font-size: 40px;
+ }
+ .modal-footer{
+     padding: 0;
+ }
+ 
 
-/* Extra large devices (large desktops, 1200px and up)*/
-
-@media (min-width: 1200px) {}
+/*----------------@media--*/ 
+@media screen and (min-device-width: 320px) 
+   {
+.item {
+margin: 0 auto;
+margin-top: 5px;
+margin-bottom: 10px;
+}
+  .modal{
+      max-width: auto;
+  }
+}
+@media screen 
+  and (min-device-width: 768px) 
+   
+   {
+.container {
+   margin: 0 auto;
+}
+}

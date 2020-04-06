@@ -2,104 +2,153 @@
 <html lang="en">
 
 <head>
-    <!-- meta data -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="Puzzle Game">
+	<meta name="keywords" content="Puzzle game, puzzle for children, kids, kids game">
 
-
-
-
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-
-
-    <title>Puzzle game</title>
-
+	<!--Favicon-->
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="assets/images/favicon/site.webmanifest">
+	<!--Bootstrap CSS-->
+    
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>Puzzle Game</title>
 </head>
 
 <body>
+<div class="row">
+			<div class="col-12 >
+	<div class="flex container p-0">
+		<div class="flex item heading">
 
-    <ul class="list-inline block">
-        <li class="list-inline-item ">
-            <h1>Puzzle game</h1>
-        </li>
-    </ul>
+			<h1>Puzzle Game</h1>
 
-    <div class="row">
-        <div class="col-12 col-sm-6">
-            <div class="container game_field">
-                <ul id="sortable" class="sortable"></ul>
+		</div>
+
+		<div class="row">
+			<div class="col-12 col-lg-6">
+				<ul id="sortable" class="sortable mx-auto flex item"></ul>
+			</div>
+
+
+
+			<div class="col-12 col-lg-6 ">
+
+				<div class="list-group flex item ">
+					<div class="list-group-item d-flex justify-content-around ">
+						
+							<div id="steps">Steps: <span class="countingSteps">0</span>
+							</div>
+							<div id="time">Time: <span id="timer">   </span>sec
+							</div>
+					</div>
+
+					<div class="list-group-item d-flex justify-content-around ">
+
+						<button id="btnRule" type="button" class="btn  btn-outline-light btn-lg" data-toggle="modal" data-target="#rulesModal"><i class="fas fa-question"></i></button>
+						<button type="button" id="muteButton" class="btn  btn-outline-light btn-lg " aria-label="Mute_Button">
+<i class="fas fa-volume-up sound"></i> <i class="fas fa-volume-mute sound"  style="display: none"></i> </button>
+
+					</div>
+					<div class="list-group-item ">
+
+						<button type="button" id="mario" class="dashboard-btn mario"> </button>
+						<button type="button" id="mario_luigi" class="dashboard-btn mario_luigi"></button>
+
+						<button type="button" id="mario_team" class="dashboard-btn mario_team"></button>
+						<button type="button" id="mario_toad" class="dashboard-btn mario_toad"></button>
+
+
+					</div>
+					<div class="list-group-item " id="gameLevels">
+
+						<div class="form-check form-check-inline ">
+							<input type="radio" name="level" id="easy" class="check_btn" checked="checked" value="3" />
+							<label for="easy">Easy</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input type="radio" name="level" id="medium" class="check_btn" value="4" />
+							<label for="medium">Medium</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input type="radio" name="level" id="hard" class="check_btn" value="5" />
+							<label for="hard">Hard</label>
+						</div>
+
+
+
+					</div>
+
+				</div>
+			</div>
             </div>
+			<div class="footer flex item"><i class="fab fa-github-alt"></i></div>
+			</div>
+</div>
+	</div>
+    <!--Puzzle Completed-->
+	<div id="puzzleCompleted" style="display:none;">
+		<div class="puzzleCompleted_style  flex item">
+			<h2 style="text-align:center">Hooray !!</h2> 
+            You have completed this picture.
+			<br />
+                Steps: <span class="countingSteps">0</span> steps.
+			<br />
+                Time Taken: <span class="countingTime">0</span> seconds<br />
+			<div>
+				<button type="button"  class="playAgain btn btn-light" onclick="window.location.reload(true);"> Play Again </button>
+			</div>
+		</div>
+	</div>
 
-
-        </div>
-
-
-
-        <div class="col-12 col-sm-6 container game_control">
-            
-            <div id="gameOver" style="display:none;">
-                <div style="background-color: #fc9e9e; padding: 5px 10px 20px 10px; text-align: center; ">
-                <h2 style="text-align:center">Game Over!!</h2>
-                Congratulations!! <br /> You have completed this picture.
-                <br />
-                Steps: <span class="stepCount">0</span> steps.
-                <br />
-                Time Taken: <span class="timeCount">0</span> seconds<br />
-                <div>
-                    <button type="button" onclick="window.location.reload(true);">Play Again</button>
-                </div>
-            </div>
-        </div>
-            
-            <div id="levelPanel">
-                <div class="form-check form-check-inline ">
-                    <input type="radio" name="level" id="easy" checked="checked" value="3" /> <label for="easy">Easy</label>
-                </div>
-                <div class="form-check form-check-inline">
-                   <input type="radio" name="level" id="medium" value="4" /> <label for="medium">Medium</label>
-                </div>
-                <div class="form-check form-check-inline">
-                     <input type="radio" name="level" id="hard" value="5" /> <label for="hard">Hard</label>
-                </div>
-            </div>
-
-
-            <ul class="list-inline block_rules ">
-                <li class="list-inline-item"><button type="button" class="btn btn-outline-light rules"> Rules</button></li>
-                <li class="list-inline-item"><button type="button" id="mix" class="btn btn-outline-light" onClick="shuffle();"> Mix Tiles </button></li>
-
-                <li class="list-inline-item"><button type="button" class="btn btn-outline-light sound">Sound On</button></li>
-                <li class="block_text" style="display: none;">
-                    <!--style="display: none;"-->
-                    <p>Welcome, to the <b>Sliding Puzzle </b>game!<br>There are fields with numbered tiles or images with two sizes 3x3 and 4x4. Just click on it to choose. The goal of the game is to collect tiles in order by making as few numbers of moves
-                        as possible. "New game"-open a game field. "Mix Tiles"- mixing tiles. "Results"-showing the best results of the player for each field size. </p>
-                </li>
-            </ul>
-            <ul class="list-inline block_control ">
-
-                <li class="list-inline-item stepCount" id="stepCount">Moves:</li>
-                <li class="list-inline-item" id="timeBox">Time: <span id="timerPanel"></span> secs</li>
-                <li class="list-inline-item"><button type="button" class="btn btn-outline-light"> Results </button></li>
-            </ul>
-            <ul class="list-inline block_game_field">
-                <li class="list-inline-item"><button type="button" id="mario" class="dashboard-btn mario"> </button></li>
-                <li class="list-inline-item"><button type="button" id="mario_team" class="dashboard-btn mario_team"></button></li>
-                <li class="list-inline-item"> <button type="button" id="mario_toad" class="dashboard-btn mario_toad"></button></li>
-            </ul>
-
-        </div>
+    <!--Modal-->
+   <div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="rulesModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+      
+        <p> Drag and drop the image pieces to make the image complete.<br/>
+       The number of steps and the time will be counted </p>
+      </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn  btn-outline-light btn-lg" data-dismiss="modal"><i class="fas fa-times"></i></button>
+          </div>
     </div>
+  </div>
+</div>
 
-    <script src="assets/js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!-- AUDIO FILES -->
+	<audio id="step_0" src="assets/audio/step_0.wav"></audio>
+	<audio id="choice" src="assets/audio/choice.wav"></audio>
+	<audio id="winner" src="https://www.noiseforfun.com/waves/musical-and-jingles/NFF-happy-bot.wav"></audio>
+	<audio id="checked" src="https://www.noiseforfun.com/waves/interface-and-media/NFF-home-switch-on.wav"></audio>
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+		integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
+	<script src="assets/js/jquery_touch.js"></script>
+	<script src="assets/js/script.js"></script>
 </body>
 
 </html>
