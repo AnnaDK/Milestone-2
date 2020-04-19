@@ -1,26 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee:100,200,300,400,500,600,700|Oxanium:100,200,300,400,500,600,700|Roboto:100,200,300,400,500,600,700') ;
 /*font-family: 'Bungee', cursive;
-font-family: 'Teko', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Fredoka One', cursive;
-Hex	    RGB          Color
-#ff3939	(255,57,57)  red
-#00ce00	(0,206,0)    green
-#ffce29	(255,206,41) yellow
-#00deff	(0,222,255)  blue
-#007b4a	(0,123,74)   dark green
-*/
+font-family: ''Oxanium', cursive;
+  Colors
+hsl(0, 94%, 39%)     red
+#ffce29	(255,206,41) yellow*/
 
 body {
-     height : 150vh;
-     max-height : 150vh;
-     background-image : url("../images/background.jpg");
+     margin: 0 auto;
+     padding: 1em;
+     min-height: 150vh;
+     background-image : url("../images/background/background.jpg");
      background-repeat : no-repeat;
      background-size : cover;
      background-position : center;
      background-attachment : fixed;
      margin-left: 0;
      margin-right: 0; 
+     
      
 }
 .container {
