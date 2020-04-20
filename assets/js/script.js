@@ -189,9 +189,9 @@ buildImage: function(puzzleImages, gameField) {
                 puzzleGame.swap(this);
                 puzzleGame.swap($dragElem);
             }
-        });          
+        });}}          
     
-   },
+   
 
 
 

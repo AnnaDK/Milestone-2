@@ -34,66 +34,62 @@
     <div class="container section-one">
             <ul id="sortable" class="sortable flex-item"></ul>
     </div>
-		
+	<div class="container section-one">	
 				<ul id="sortable" class="sortable mx-auto flex item"></ul>
-			
+	</div>	
 
+    <!--Game Control-->
+		<div class="container section-two">
+			<div class="list-group flex-item">
+				<div class="list-group-item d-flex justify-content-around ">
 
-
-			<div class="col-12 col-lg-6 ">
-
-				<div class="list-group flex item ">
-					<div class="list-group-item d-flex justify-content-around ">
-
-						<div id="steps">Steps: <span class="countingSteps">0</span>
-						</div>
-						<div id="time">Time: <span id="timer">   </span>sec
-						</div>
+					<div id="steps">Steps: <span class="countingSteps">0</span>
 					</div>
-
-					<div class="list-group-item d-flex justify-content-around ">
-
-						<button id="btnRule" type="button" class="btn  btn-outline-light btn-lg" data-toggle="modal" data-target="#rulesModal"><i class="fas fa-question"></i></button>
-						<button type="button" id="muteButton" class="btn  btn-outline-light btn-lg " aria-label="Mute_Button">
-<i class="fas fa-volume-up sound"></i> <i class="fas fa-volume-mute sound"  style="display: none"></i> </button>
-
+					<div id="time">Time: <span id="timer">   </span>sec
 					</div>
-					<div class="list-group-item ">
+				</div>
 
-						<button type="button" id="mario" class="dashboard-btn mario"> </button>
-						<button type="button" id="mario_luigi" class="dashboard-btn mario_luigi"></button>
+                <div class="list-group-item d-flex justify-content-around ">
 
-						<button type="button" id="mario_team" class="dashboard-btn mario_team"></button>
-						<button type="button" id="mario_toad" class="dashboard-btn mario_toad"></button>
-
-
-					</div>
-					<div class="list-group-item " id="gameLevels">
-
-						<div class="form-check form-check-inline ">
-							<input type="radio" name="level" id="easy" class="check_btn" checked="checked" value="3" />
-							<label for="easy">Easy</label>
-						</div>
-						<div class="form-check form-check-inline">
-							<input type="radio" name="level" id="medium" class="check_btn" value="4" />
-							<label for="medium">Medium</label>
-						</div>
-						<div class="form-check form-check-inline">
-							<input type="radio" name="level" id="hard" class="check_btn" value="5" />
-							<label for="hard">Hard</label>
-						</div>
-
-
-
-					</div>
+					<button id="btnRule" type="button" class="btn  btn-outline-light btn-lg" aria-label="Rules" data-toggle="modal" data-target="#rulesModal"><i class="fas fa-question"></i></button>
+					<button type="button" id="muteButton" class="btn  btn-outline-light btn-lg " aria-label="Mute_Button">
+                    <i class="fas fa-volume-up sound"></i> <i class="fas fa-volume-mute sound"  style="display: none"></i> </button>
 
 				</div>
+					<div class="list-group-item ">
+
+					<button type="button" id="mario" class="dashboard-btn mario"> </button>
+					<button type="button" id="mario_luigi" class="dashboard-btn mario_luigi"></button>
+
+					<button type="button" id="mario_team" class="dashboard-btn mario_team"></button>
+					<button type="button" id="mario_toad" class="dashboard-btn mario_toad"></button>
+
+
+				</div>
+				<div class="list-group-item " id="gameLevels">
+
+					<div class="form-check form-check-inline ">
+						<input type="radio" name="level" id="easy" class="check_btn" checked="checked" value="3" />
+						<label for="easy">Easy</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input type="radio" name="level" id="medium" class="check_btn" value="4" />
+						<label for="medium">Medium</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input type="radio" name="level" id="hard" class="check_btn" value="5" />
+						<label for="hard">Hard</label>
+					</div>
+	             </div>
+
 			</div>
 		</div>
-		<div class="footer flex item"><i class="fab fa-github-alt"></i></div>
+         <!--Footer-->
+        <div class="footer flex-item" style="flex-shrink: 0">
+			<a href="https://github.com/AnnaDK/Puzzle-Game"><i class="fab fa-github-alt"></i></a>
+		</div>
 	</div>
-	</div>
-	</div>
+
 	<!--Puzzle Completed-->
 	<div id="puzzleCompleted" style="display:none;">
 		<div class="puzzleCompleted_style  flex item">
