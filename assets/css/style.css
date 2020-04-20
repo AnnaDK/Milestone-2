@@ -20,10 +20,10 @@ body {
      
 }
 .container {
-     margin: auto;
+     margin: 0 auto;
      padding: 0;
      display: flex;
-     flex-flow: column wrap;
+     flex-flow: row  wrap;
      justify-content:center;
      align-items:stretch;
      cursor: pointer;

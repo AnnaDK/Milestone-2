@@ -14,7 +14,7 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
 	<link rel="manifest" href="assets/images/favicon/site.webmanifest">
 	<!--Bootstrap CSS-->
-    
+
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
@@ -23,19 +23,20 @@
 </head>
 
 <body>
-<div class="row">
-			<div class="col-12 >
-	<div class="flex container p-0">
-		<div class="flex item heading">
+	<!--Header-->
+    <div class="container">
+		<div class="heading flex-item">
+              <h1>Puzzle Game</h1>
+        </div>
+    
+    <!--Puzzle Game--> 
 
-			<h1>Puzzle Game</h1>
-
-		</div>
-
-		<div class="row">
-			<div class="col-12 col-lg-6">
+    <div class="container section-one">
+            <ul id="sortable" class="sortable flex-item"></ul>
+    </div>
+		
 				<ul id="sortable" class="sortable mx-auto flex item"></ul>
-			</div>
+			
 
 
 
@@ -43,11 +44,11 @@
 
 				<div class="list-group flex item ">
 					<div class="list-group-item d-flex justify-content-around ">
-						
-							<div id="steps">Steps: <span class="countingSteps">0</span>
-							</div>
-							<div id="time">Time: <span id="timer">   </span>sec
-							</div>
+
+						<div id="steps">Steps: <span class="countingSteps">0</span>
+						</div>
+						<div id="time">Time: <span id="timer">   </span>sec
+						</div>
 					</div>
 
 					<div class="list-group-item d-flex justify-content-around ">
@@ -88,16 +89,16 @@
 
 				</div>
 			</div>
-            </div>
-			<div class="footer flex item"><i class="fab fa-github-alt"></i></div>
-			</div>
-</div>
+		</div>
+		<div class="footer flex item"><i class="fab fa-github-alt"></i></div>
 	</div>
-    <!--Puzzle Completed-->
+	</div>
+	</div>
+	<!--Puzzle Completed-->
 	<div id="puzzleCompleted" style="display:none;">
 		<div class="puzzleCompleted_style  flex item">
-			<h2 style="text-align:center">Hooray !!</h2> 
-            You have completed this picture.
+			<h2 style="text-align:center">Hooray !!</h2>
+			You have completed this picture.
 			<br />
                 Steps: <span class="countingSteps">0</span> steps.
 			<br />
@@ -108,28 +109,28 @@
 		</div>
 	</div>
 
-    <!--Modal-->
-   <div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="rulesModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12">
-      
-        <p> Drag and drop the image pieces to make the image complete.<br/>
+	<!--Modal-->
+	<div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="rulesModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12">
+
+							<p> Drag and drop the image pieces to make the image complete.<br/>
        The number of steps and the time will be counted </p>
-      </div>
-      </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn  btn-outline-light btn-lg" data-dismiss="modal"><i class="fas fa-times"></i></button>
-          </div>
-    </div>
-  </div>
-</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn  btn-outline-light btn-lg" data-dismiss="modal"><i class="fas fa-times"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
 
-
-	<!-- AUDIO FILES -->
+<!-- AUDIO FILES -->
 	<audio id="step_0" src="assets/audio/step_0.wav"></audio>
 	<audio id="choice" src="assets/audio/choice.wav"></audio>
 	<audio id="winner" src="https://www.noiseforfun.com/waves/musical-and-jingles/NFF-happy-bot.wav"></audio>
