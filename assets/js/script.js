@@ -149,5 +149,66 @@ buildImage: function(puzzleImages, gameField) {
         puzzleWidth = 300;
     }
     let loadingImage = puzzleImages[0];
-    let percent = 100/(n-1);
-    $("ul").empty();                  }}
+    let percent = 100 / (n - 1);
+    $("ul").empty();  
+    
+    for (let i = 0; i < n * n; i++ ){
+        let x = (percent * ( i % n)) + "%";
+        let y =  (percent * Math.floor(i / n)) + "%";
+        let li = $('<li data-value="' + (i) + '"></li>');
+        
+       
+        (li).css({
+                background: 'url(' + loadingImage.src + ')',
+                backgroundSize:(n * 100) + '%',
+                backgroundPosition: x + ' ' + y 
+            })
+                .width(puzzleWidth / n)
+                .height(puzzleWidth / n)
+                $("ul").append(li).randomize("li");
+            
+        
+    }
+   
+  
+} ,      
+   swap: function () {
+        $("li").draggable({
+            snap: "#droppable",
+            snapMode: "outer",
+            revert: "invalid",
+            helper: "clone"
+        });
+        $("li").droppable({
+                drop: function (event, ui) {
+                var $dragElem = $(ui.draggable).clone().replaceAll(this);
+                $(this).replaceAll(ui.draggable);
+                playDropLi();
+
+                
+                puzzleGame.swap(this);
+                puzzleGame.swap($dragElem);
+            }
+        });          
+    
+   },
+
+
+
+
+   /*---Resizing the screen will make window pop up. The best way I found right now to fix problem with puzzle on small screens. 
+Code will be changed in future if will find better solution
+More explanation in README.md--*/
+
+
+$(window).resize(function () {
+
+    if (window.matchMedia('(min-width: 575.98px)').matches) {
+        $('#sortable').empty().html($('#puzzleReset').html());
+
+    } 
+    return false;
+});
+
+/*--Modal--*/
+$('#myModal').modal('handleUpdate');
