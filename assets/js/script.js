@@ -136,7 +136,7 @@ let puzzleGame ={
         this.startTime = new Date().getTime();
         /*this.tick();*/
         this.buildImage(puzzleImages, gameField);
-        this.swap("#sortable li");
+        this.swap("ul li");
         },
  
 buildImage: function(puzzleImages, gameField) {
@@ -166,12 +166,8 @@ buildImage: function(puzzleImages, gameField) {
                 .width(puzzleWidth / n)
                 .height(puzzleWidth / n)
                 $("ul").append(li).randomize("li");
-            
-        
-    }
-   
-  
-} ,      
+            }
+   } ,      
    swap: function () {
         $("li").draggable({
             snap: "#droppable",
@@ -190,7 +186,23 @@ buildImage: function(puzzleImages, gameField) {
                 puzzleGame.swap($dragElem);
             }
         });}}          
-    
+    /*---Resizing the screen will make window pop up. The best way I found right now to fix problem with puzzle on small screens. 
+Code will be changed in future if will find better solution
+More explanation in README.md--*/
+
+
+$(window).resize(function () {
+
+    if (window.matchMedia('(min-width: 575.98px)').matches) {
+        $('#sortable').empty().html($('#puzzleReset').html());
+
+    } 
+    return false;
+});
+
+/*--Modal--*/
+$('#myModal').modal('handleUpdate');
+
    
 
 
