@@ -6,19 +6,19 @@ hsl(0, 94%, 39%)     red
 #ffce29	(255,206,41) yellow*/
 
 body {
+     display: flex;
+     flex-direction: column;
      margin: 0 auto;
      padding: 1em;
      min-height: 150vh;
      background-image : url("../images/background/background.jpg");
      background-repeat : no-repeat;
      background-size : cover;
-     background-position : center;
+     background-position : center center;
      background-attachment : fixed;
-     margin-left: 0;
-     margin-right: 0; 
-     
-     
-}
+    }
+
+    /*-------------FlexBox--*/
 .container {
      margin: 0 auto;
      padding: 0;
@@ -26,13 +26,24 @@ body {
      flex-flow: row  wrap;
      justify-content:center;
      align-items:stretch;
-     cursor: pointer;
+     
    }
- .item{
-     flex: 1 0;
-     align-self:stretch;
+ .flex-item{
+     flex: 1 0 content;
+     align-self: center;
 }
 
+ .section-one{
+      display: flex;
+      flex-flow: column wrap;
+      flex: 1 0;
+}
+
+ .section-two{
+     display: flex;
+     flex-flow: row nowrap;
+     flex: 1 0;
+ }
 .heading {
      margin-top: 15px;
      margin-left: auto;
