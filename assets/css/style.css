@@ -131,26 +131,33 @@ box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
      float : left;
      cursor : pointer;
 }
-/*------------------------------------Buttons*/
+/*------------------------------------Buttons--Icons*/
+
 .dashboard-btn {
-height : 100px;
-width : 100px;
-border-radius : 5px;
-border : #fff solid 3px;
-box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
-margin-left : auto;
-margin-right : auto;
-transform : translateY(4px);
+     height : 100px;
+     width : 100px;
+     border-radius : 5px;
+     border : #fff solid 3px;
+     -webkit-box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
+     box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
+     margin-left : auto;
+     margin-right : auto;
+     -webkit-transform : translateY(4px);
+     -ms-transform : translateY(4px);
+     transform : translateY(4px);
 }
 
 .dashboard-btn:hover {
-opacity : 0.7;
+     opacity : 0.7;
 }
 
 .dashboard-btn:active {
-opacity : 0.7;
-box-shadow : 0 5px #666;
-transform : translateY(6px);
+     opacity : 0.7;
+     -webkit-box-shadow : 0 5px #666;
+     box-shadow : 0 5px #666;
+     -webkit-transform : translateY(6px);
+     -ms-transform : translateY(6px);
+     transform : translateY(6px);
 }
 
 .btn-outline-light {
