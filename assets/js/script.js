@@ -175,21 +175,40 @@ buildImage: function(puzzleImages, gameField) {
             revert: "invalid",
             helper: "clone"
         });
-        $("li").droppable({
-                drop: function (event, ui) {
-                var $dragElem = $(ui.draggable).clone().replaceAll(this);
-                $(this).replaceAll(ui.draggable);
+        /*The replaceAll() method is an inbuilt method in jQuery which is used to replace selected elements with new HTML elements. Parameters: This method accepts two parameter as mentioned above and described below: content: It is the required parameter which is used to specify the content to insert.*/
+        /*drop jQuery ui event*/
+        $("li").droppable({ 
+                drop: function( event, ui ) {
+                var $draggableLi = $(ui.draggable).clone().replaceAll(this);
+                $(this).replaceAll(ui.draggable); 
                 playDropLi();
-
-                //Return an array with the data-value of "li"
+                
+             //Return an array with the data-value of "li"
              //https://api.jquery.com/map/
              liArray = $("li").map(function () {
                   return $(this).attr("data-value"); 
                 });
+
+
+                if (sorted(liArray)) {
+                    $('#sortable>li').css({ "border": "none" });//the  puzzle borders gone as soon as puzzle complete for clear image
+                    playWinner();
+                    $('.list-group').empty().html($('#puzzleCompleted').html());
+                    }
+                else {
+                    var now = new Date().getTime();
+                    puzzleGame.stepCount++;
+                    $(".countingSteps").text(puzzleGame.stepCount);
+                    $(".countingTime").text(parseInt((now - puzzleGame.startTime) / 1000, 10));
+                }
+    
+
                 puzzleGame.swap(this);
-                puzzleGame.swap($dragElem);
+                puzzleGame.swap($draggableLi);
+                }})
             }
-        });}}          
+      }     
+
     /*---Resizing the screen will make window pop up. The best way I found right now to fix problem with puzzle on small screens. 
 Code will be changed in future if will find better solution
 More explanation in README.md--*/
