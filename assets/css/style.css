@@ -265,9 +265,13 @@ box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
 }
 
 
+/*--------------------------------------------------puzzleCompleted--*/
+
 .puzzleCompleted_style {
+    
      background-color : #ffce29;
-     padding : 10px 10px 20px 10px;
+     margin: 0 auto;
+     padding: 1em;
      text-align : center;
      font-family: 'Oxanium', cursive;
      font-weight: 600;
@@ -275,12 +279,28 @@ box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
      text-shadow : 2px 4px 4px rgb(7, 7, 7, 0.99);
      color : #fff;
      border : white solid 4px;
-     width : 400px;
-     height : 400px;
      margin-left: auto;
      margin-right: auto;
+     }
+
+.puzzleReset_style {
+     background-color :hsl(0, 94%, 39%);
+     margin: 0 auto;
+     width: 100%;
+     padding: 2em;
+     text-align : center;
+     font-family: 'Oxanium', cursive;
+     font-weight: 600;
+     font-size : 30px;
+     text-shadow : 2px 4px 4px rgb(7, 7, 7, 0.99);
+     color : #fff;
+     border : white solid 4px;
+     margin-left: auto;
+     margin-right: auto;
+     }    
      
-}
+     
+
 /*---------------------------------------------Modal----*/
  
 .modal {
