@@ -23,22 +23,19 @@
 </head>
 
 <body>
-	<!--Header-->
-    <div class="container">
+<!--Header-->
+	<div class="container">
 		<div class="heading flex-item">
-              <h1>Puzzle Game</h1>
-        </div>
-    
-    <!--Puzzle Game--> 
+			<h1>Puzzle Game</h1>
+		</div>
 
-    <div class="container section-one">
-            <ul id="sortable" class="sortable flex-item"></ul>
-    </div>
-	<div class="container section-one">	
-				<ul id="sortable" class="sortable mx-auto flex item"></ul>
-	</div>	
+<!--Puzzle-->
+		<div class="container section-one">
+			<ul id="sortable" class="sortable flex-item"></ul>
+		</div>
 
-    <!--Game Control-->
+        
+<!--Game Control-->
 		<div class="container section-two">
 			<div class="list-group flex-item">
 				<div class="list-group-item d-flex justify-content-around ">
@@ -52,11 +49,12 @@
                 <div class="list-group-item d-flex justify-content-around ">
 
 					<button id="btnRule" type="button" class="btn  btn-outline-light btn-lg" aria-label="Rules" data-toggle="modal" data-target="#rulesModal"><i class="fas fa-question"></i></button>
-					<button type="button" id="muteButton" class="btn  btn-outline-light btn-lg " aria-label="Mute_Button">
+					<button id="btnRule" type="button" class="btn  btn-outline-light btn-lg" aria-label="Results" data-toggle="modal" data-target="#resultsModal"><i class="fas fa-star"></i></button>
+                    <button type="button" id="muteButton" class="btn  btn-outline-light btn-lg " aria-label="Mute_Button">
                     <i class="fas fa-volume-up sound"></i> <i class="fas fa-volume-mute sound"  style="display: none"></i> </button>
 
 				</div>
-					<div class="list-group-item ">
+				<div class="list-group-item ">
 
 					<button type="button" id="mario" class="dashboard-btn mario"> </button>
 					<button type="button" id="mario_luigi" class="dashboard-btn mario_luigi"></button>
@@ -84,27 +82,33 @@
 
 			</div>
 		</div>
-         <!--Footer-->
+        
+        <!--Footer-->
         <div class="footer flex-item" style="flex-shrink: 0">
 			<a href="https://github.com/AnnaDK/Puzzle-Game"><i class="fab fa-github-alt"></i></a>
 		</div>
 	</div>
 
+	
+
 	<!--Puzzle Completed-->
-	<div id="puzzleCompleted" style="display:none;">
-		<div class="puzzleCompleted_style  flex item">
+	<div class="container" id="puzzleCompleted" style="display:none;">
+		<div class="puzzleCompleted_style  flex-item">
 			<h2 style="text-align:center">Hooray !!</h2>
 			You have completed this picture.
 			<br />
                 Steps: <span class="countingSteps">0</span> steps.
 			<br />
                 Time Taken: <span class="countingTime">0</span> seconds<br />
+
+                For saving your results press "Save"
 			<div>
+                 <button type="button"  class="playAgain btn btn-light" data-toggle="modal" data-target="#saveModal"> Save </button>
 				<button type="button"  class="playAgain btn btn-light" onclick="window.location.reload(true);"> Play Again </button>
 			</div>
 		</div>
 	</div>
-<!--Puzzle Reset-->
+	<!--Puzzle Reset-->
 	<div class="container" id="puzzleReset" style="display:none;">
 		<div class="puzzleReset_style  flex-item">
 			<h2 style="text-align:center"> Press the button to start the game</h2>
@@ -114,6 +118,7 @@
 			</div>
 		</div>
 	</div>
+
 
 	<!--Modal Rules-->
 	<div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-label="Rules" aria-hidden="true">
@@ -132,7 +137,30 @@
 			</div>
 		</div>
 	</div>
-<!-- AUDIO FILES -->
+<!--Modal Save-->
+	<div class="modal fade modalSave" id="saveModal" tabindex="-1" role="dialog" aria-label="Save" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="container">
+				<form>
+  <div class="form-group">
+    
+    <input type="text" class="form-control" name="name" id="playerName" maxlength="10"  placeholder="Name" required>
+  </div>
+				</form>
+                	
+				</div>
+				<div class="modal-footer">
+                 <button type="button" id="insert" class="modal_btn btn btn-light" type="submit">Save </button>
+                 <button type="button"  class="modal_btn btn btn-light" data-dismiss="modal">Close</button>
+                
+				
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- AUDIO FILES -->
 	<audio id="step_0" src="assets/audio/step_0.wav"></audio>
 	<audio id="choice" src="assets/audio/choice.wav"></audio>
 	<audio id="winner" src="https://www.noiseforfun.com/waves/musical-and-jingles/NFF-happy-bot.wav"></audio>
@@ -151,7 +179,7 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 	</script>
 	<script src="assets/js/jquery_touch.js"></script>
-	<script src="assets/js/script.js"></script>
+	<script src="assets/js/game.js"></script>
 </body>
 
 </html>
