@@ -241,30 +241,30 @@ box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
 
 /*---------------------------------------------Dashboard Icons*/
 #mario {
-background-image : url("../images/icons/mario_icon.png");
-margin-right : 10px;
-margin-left : 10px;
+     background-image : url("../images/icons/mario_icon.png");
+     margin-right : 10px;
+     margin-left : 10px;
 }
 
 #mario_toad {
-background-image : url("../images/icons/mario_toad_icon.png");
-margin-right : 10px;
-margin-left : 10px;
+     background-image : url("../images/icons/mario_toad_icon.png");
+     margin-right : 10px;
+     margin-left : 10px;
 }
 
 #mario_team {
-background-image : url("../images/icons/mario_team_icon.png");
-margin-right : 10px;
-margin-left : 10px;
+     background-image : url("../images/icons/mario_team_icon.png");
+     margin-right : 10px;
+     margin-left : 10px;
 }
 
 #mario_luigi {
-background-image : url("../images/icons/mario_luigi_icon.png");
-margin-right : 10px;
-margin-left : 10px;
+     background-image : url("../images/icons/mario_luigi_icon.png");
+     margin-right : 10px;
+     margin-left : 10px;
 }
-/*--------------------------------------------------------GameOver*/
-/*--------------------------------------------------------GameOver*/
+
+
 .puzzleCompleted_style {
      background-color : #ffce29;
      padding : 10px 10px 20px 10px;
