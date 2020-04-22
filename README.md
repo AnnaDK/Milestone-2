@@ -5,3 +5,19 @@ Puzzle Game is a fun puzzle for children. It has a choice of images for a game f
 [Click To Play !](https://annadk.github.io/Milestone-2/)
 
 ****
+## Table of Contents
+
+
+## 1. [UX](#ux) 
+   * ### [Project Goals](#project-goals)
+   * ### [Player Goals](#player-goals)
+   * ### [Developer Goals](#developer-goals)
+   * ### [User Stories](#user-stories)
+   * ### [Game Design](#game-design)
+   * ### [Wireframes](#wireframes)
+
+## 2. [Features](#features)
+   * ### [Existing Features](#existing-features)
+   * ### [Features Left To Implement](#features-left-to-implement)
+
+## 3. [Technologies Used](#technologies-used)
