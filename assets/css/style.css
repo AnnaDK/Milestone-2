@@ -202,26 +202,39 @@ box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
      font-weight: 400;
 }
 .playAgain:active {
-box-shadow : 0 5px #666;
-transform : translateY(6px);
+     -webkit-box-shadow : 0 5px #666;
+     box-shadow : 0 5px #666;
+     -webkit-transform : translateY(6px);
+     -ms-transform : translateY(6px);
+     transform : translateY(6px);
 }
 
 .playAgain:hover {
-opacity : 0.7;
+     opacity : 0.7;
 }
 #time, #steps {
      padding-top: 5px;   
 }
 
 .fas{
-font-size : 30px;
-margin: 2px;
-padding: 2px;
+     font-size : 30px;
+     margin: 2px;
+     padding: 2px;
 
 }
+.fas:hover {
+     opacity : 0.7;
+}
 
-label {
-margin-left : 5px;
+.fab{
+     font-size : 30px;
+     color:white;
+     text-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
+     padding: 0.2em;
+     margin: 0;
+    }
+.fab:hover {
+     opacity : 0.7;
 }
 
 
