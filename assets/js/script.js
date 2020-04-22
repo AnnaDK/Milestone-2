@@ -181,7 +181,11 @@ buildImage: function(puzzleImages, gameField) {
                 $(this).replaceAll(ui.draggable);
                 playDropLi();
 
-                
+                //Return an array with the data-value of "li"
+             //https://api.jquery.com/map/
+             liArray = $("li").map(function () {
+                  return $(this).attr("data-value"); 
+                });
                 puzzleGame.swap(this);
                 puzzleGame.swap($dragElem);
             }
