@@ -1,9 +1,17 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+
+
 @import url('https://fonts.googleapis.com/css?family=Bungee:100,200,300,400,500,600,700|Oxanium:100,200,300,400,500,600,700|Roboto:100,200,300,400,500,600,700') ;
 /*font-family: 'Bungee', cursive;
 font-family: ''Oxanium', cursive;
   Colors
 hsl(0, 94%, 39%)     red
-#ffce29	(255,206,41) yellow*/
+#ffce29	(255,206,41) yellow
+       */
+
+
+
 
 body {
      display: -webkit-box;
@@ -24,8 +32,7 @@ body {
     
      
 }
-
- /*-------------FlexBox--*/
+/*-------------FlexBox--*/
 .container {
      margin: 0 auto;
      padding: 0;
@@ -118,59 +125,52 @@ body {
      margin-right: auto;
      
 }
-/*----------------------------List group--*/
+/*-------------------------------List-group*/
+
+ span, label {
+     margin-left : 5px;
+}
+
 .list-group{
      margin-top : 20px;
-     margin-bottom: 0;
      margin-left: auto;
      margin-right: auto;
-}
-.fab{
-    padding:0;
-    margin: 0;
-}
-
-span {
-margin-left : 5px;
-}
-
-
-.list-group{
-    margin-top : 20px;
+     width: 600px;
 }
 .list-group-item {
-background-color : #ffce29 !important ;
-text-align: center;
-font-family: 'Oxanium', cursive;
-font-weight: 600;
-font-size : 30px;
-text-shadow: 0 5px 4px rgba(7, 7, 7, 0.99);
-color : white;
-border : white solid 4px !important ;
-box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
+     background-color : #ffce29 !important ;
+     text-align: center;
+     font-family: 'Oxanium', cursive;
+     font-weight: 600;
+     font-size : 30px;
+     text-shadow: 0 5px 4px rgba(7, 7, 7, 0.99);
+     color : white;
+     border : white solid 4px !important ;
+     -webkit-box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
+     box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
 
 }
 
 /*-----------------------------------Puzzle-Sortable */
+
+
 #sortable {
+      
      list-style-type : none;
      padding : 0;
-     width : 400px;
+     width: 400px;
      cursor : pointer;
      margin-top : 20px;
      margin-bottom: 0;
-     margin-left: auto;
-     margin-right: auto;
-     
-}
+    }
 
 #sortable li {
      background-size : 400% 400%;
      border : white solid 0.5px;
-     padding :20px;
      margin : -0.5px;
      float : left;
      cursor : pointer;
+    
 }
 /*------------------------------------Buttons--Icons*/
 
@@ -278,8 +278,6 @@ box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
      opacity : 0.7;
 }
 
-
-
 /*---------------------------------------------Dashboard Icons*/
 #mario {
      background-image : url("../images/icons/mario_icon.png");
@@ -304,7 +302,6 @@ box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
      margin-right : 10px;
      margin-left : 10px;
 }
-
 
 /*--------------------------------------------------puzzleCompleted--*/
 
@@ -344,12 +341,8 @@ box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
 
 /*---------------------------------------------Modal----*/
  
-.modal {
-    display: flex;
-
-}
  .modal-content {
-     padding : 10px 10px 10px 10px;
+     padding : 10px;
      background-color : #ffce29;
      text-align : center;
      font-family: 'Oxanium', cursive;
@@ -366,24 +359,32 @@ box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
      padding: 0;
  }
  
+ 
 
-/*----------------@media--*/ 
-@media screen and (min-device-width: 320px) 
-   {
-.item {
-margin: 0 auto;
-margin-top: 5px;
-margin-bottom: 10px;
-}
-  .modal{
-      max-width: auto;
-  }
-}
-@media screen 
-  and (min-device-width: 768px) 
-   
-   {
-.container {
-   margin: 0 auto;
-}
+ /* Extra small devices (portrait phones, less than 576px)*/
+
+@media (max-width: 575.98px) { 
+    #sortable{
+        width:300px;
+    }
+    #sortable li {
+     background-size : 300% 300%;}
+    .list-group{
+     margin-top :5px;}
+
+    .list-group-item{
+        font-size: 25px;
+    }
+    .heading {
+        font-size: 20px;
+    }
+    .modal-content{
+     font-weight: 500;
+     font-size : 25px;
+    }
+    .section-one{
+     margin: 0 auto;
+     padding: 1em;
+     
+    }
 }
