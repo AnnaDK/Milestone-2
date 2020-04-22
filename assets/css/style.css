@@ -25,37 +25,68 @@ body {
      
 }
 
-    /*-------------FlexBox--*/
+ /*-------------FlexBox--*/
 .container {
      margin: 0 auto;
      padding: 0;
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
-     flex-flow: row  wrap;
-     justify-content:center;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+     -ms-flex-flow: row wrap;
+     flex-flow: row wrap;
+     -webkit-box-align:stretch;
+     -ms-flex-align:stretch;
      align-items:stretch;
-     
-   }
+     -ms-flex-line-pack:center;
+     align-content:center; 
+         }
+
  .flex-item{
-     flex: 1 0 content;
-     align-self: center;
+     -webkit-box-flex: 1;
+     -ms-flex: 1 0;
+      flex: 1 0 content;
+     -ms-flex-preferred-size:auto;
+     -ms-flex-item-align: center;
+     -ms-grid-row-align: center;
+      align-self: center;
 }
 
- .section-one{
-      display: flex;
-      flex-flow: column wrap;
-      flex: 1 0;
-}
-
- .section-two{
+ 
+.section-two{
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
+     -webkit-box-orient: horizontal;
+     -webkit-box-direction: normal;
+     -ms-flex-flow: row nowrap;
      flex-flow: row nowrap;
+     -webkit-box-flex: 1;
+     -ms-flex: 1 0;
      flex: 1 0;
- }
+}   
+
+.section-one{
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+     -ms-flex-flow: column wrap;
+     flex-flow: column wrap;
+     -webkit-box-flex: 1;
+     -ms-flex: 1 0;
+     flex: 1 0;
+}
+
+
+/*-------------------Heading--Footer*/
 .heading {
      margin-top: 15px;
      margin-left: auto;
      margin-right: auto;
-     padding: 0;
+     padding:0 0.5em 0 0.5em;
      width: 100%;
      background-color : #ffce29;
      text-align : center;
@@ -67,22 +98,25 @@ body {
      text-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
      border : white solid 4px;
      border-radius: 2px;
-     box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
+     -webkit-box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
+             box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
 }
 
 .footer {
-    height: 50px;
-    font-size : 25px;
-    text-align : center;
-    text-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
-border : white solid 4px;
-border-radius: 2px;
-box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
-    color : #fff;
-    background-color : #ffce29;
- margin-top: 10px;
+     height: 50px;
+     width:100%;
+     text-align : center;
+     text-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
+     border : white solid 4px;
+     border-radius: 2px;
+     -webkit-box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
+             box-shadow : 0 5px 4px rgb(7, 7, 7, 0.99);
+     color : #fff;
+     background-color : #ffce29;
+     margin-top: 15px;
      margin-left: auto;
      margin-right: auto;
+     
 }
 /*----------------------------List group--*/
 .list-group{
