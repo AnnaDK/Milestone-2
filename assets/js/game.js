@@ -245,25 +245,16 @@ let puzzleGame ={
                  
 
         
-    ////*Randomize a sequence of elements with jQuery from https://stackoverflow.com/questions/1533910/randomize-a-sequence-of-div-elements-with-jquery*/
-function isSorted(arr) {
-    for (var i = 0; i < arr.length - 1; i++) {
+    
+    function isSorted(arr) {
+ for (var i = 0; i < arr.length - 1; i++) {
         if (arr[i] != i)
             return false;
     }
     return true;
 
 }
- 
-/*function isSorted(arr){
-    if (arr[0] < arr[1]){
-        return isSorted(arr.splice(0, 1));
-    } else if (arr[0] > arr[1]){
-        return false;
-    } else if (arr[1] === undefined){
-        return true;
-    }
-};*/
+ 	
 
 
 /*---Resizing the screen will make window pop up. The best way I found right now to fix problem with puzzle on small screens. 
