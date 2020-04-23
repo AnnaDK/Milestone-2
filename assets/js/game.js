@@ -137,37 +137,41 @@ let puzzleGame ={
         /*this.tick();*/
         this.buildImage(puzzleImages, gameField);
         this.swap("ul li");
+        
         },
  
-buildImage: function(puzzleImages, gameField) {
-    let n = gameField;
-    if (window.matchMedia('(min-width: 575.98)').matches){
-        n = gameField || 4;
-        puzzleWidth = 400;
-    } else {
-        n = gameField||3;
-        puzzleWidth = 300;
-    }
-    let loadingImage = puzzleImages[0];
-    let percent = 100 / (n - 1);
-    $("ul").empty();  
-    
-    for (let i = 0; i < n * n; i++ ){
-        let x = (percent * ( i % n)) + "%";
-        let y =  (percent * Math.floor(i / n)) + "%";
-        let li = $('<li data-value="' + (i) + '"></li>');
-        
-       
-        (li).css({
-                background: 'url(' + loadingImage.src + ')',
+
+    buildImage: function (puzzleImages, gameField) {
+       n = gameField|| 4;
+        if (window.matchMedia('(min-width: 575.98px)').matches) {
+           puzzleWidth = 400;
+          
+        } else {
+           puzzleWidth = 300;
+           
+        }
+        var percent = 100 / (n - 1);
+        let loadImage = puzzleImages[0];
+        $("ul").empty();
+        for (var i = 0; i < n * n; i++) {
+            var x = (percent * (i % n)) + "%";
+            var y = (percent * Math.floor(i / n)) + "%";/* data-* attributes allow us to store extra information on standard, semantic HTML elements*/
+            var li = $('<li class ="item" data-value="' + (i) + '"></li>');
+            (li).css({
+                background: 'url(' + loadImage.src + ')',
                 backgroundSize:(n * 100) + '%',
-                backgroundPosition: x + ' ' + y 
-            })
+                backgroundPosition: x + ' ' + y,
+                
+            })                            
                 .width(puzzleWidth / n)
                 .height(puzzleWidth / n)
-                $("ul").append(li).randomize("li");
-            }
-   } ,      
+                 $("ul").append(li);
+         }
+          $("ul").randomize("li");
+      
+         },   
+
+  
    swap: function () {
         $("li").draggable({
             snap: "#droppable",
@@ -182,34 +186,66 @@ buildImage: function(puzzleImages, gameField) {
                 var $draggableLi = $(ui.draggable).clone().replaceAll(this);
                 $(this).replaceAll(ui.draggable); 
                 playDropLi();
+                liArray = $("li").map(function () {
+                  return $(this).attr("data-value");});
+                /*liArray = $("li").map(function () {
+                  return $(this).attr("data-value");}),*/
                 
              //Return an array with the data-value of "li"
              //https://api.jquery.com/map/
-             liArray = $("li").map(function () {
-                  return $(this).attr("data-value"); 
-                });
-
-
-                if (sorted(liArray)) {
-                    $('#sortable>li').css({ "border": "none" });//the  puzzle borders gone as soon as puzzle complete for clear image
-                    playWinner();
-                    $('.list-group').empty().html($('#puzzleCompleted').html());
-                    }
+             if (isSorted(liArray)){
+                 playWinner();
+                $('ul>li').css({ "border": "none" });
+                 $('.list-group').empty().html($('#puzzleCompleted').html());
+                    //the  puzzle borders gone as soon as puzzle complete for clear image
+            
+                     
+                   }
                 else {
+                     
                     var now = new Date().getTime();
                     puzzleGame.stepCount++;
                     $(".countingSteps").text(puzzleGame.stepCount);
                     $(".countingTime").text(parseInt((now - puzzleGame.startTime) / 1000, 10));
+                   
                 }
-    
-
-                puzzleGame.swap(this);
+                
+                
+                 puzzleGame.swap(this);
                 puzzleGame.swap($draggableLi);
                 }})
-            }
-      }     
+   }
+            
+   
 
-    /*---Resizing the screen will make window pop up. The best way I found right now to fix problem with puzzle on small screens. 
+
+
+   }
+      
+
+
+    
+    
+                
+
+                 
+
+        
+    ////*Randomize a sequence of elements with jQuery from https://stackoverflow.com/questions/1533910/randomize-a-sequence-of-div-elements-with-jquery*/
+
+ 
+function isSorted(arr){
+    if (arr[0] < arr[1]){
+        return isSorted(arr.splice(0, 1));
+    } else if (arr[0] > arr[1]){
+        return false;
+    } else if (arr[1] === undefined){
+        return true;
+    }
+};
+
+
+/*---Resizing the screen will make window pop up. The best way I found right now to fix problem with puzzle on small screens. 
 Code will be changed in future if will find better solution
 More explanation in README.md--*/
 
