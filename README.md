@@ -97,4 +97,149 @@ The wireframes were created using  [Balsamiq Wireframes](https://balsamiq.com/).
 
 Web site design and mobile display [here](assets/wireframes/wireframes_puzzle_game.pdf)
 
+----------------------------------------------------------------------
+
+
+## [Features](#features)
+
+### [Existing Features](#existing-features)
+
+#### Mane display
+
+Title of the game
+
+ 1. Game field :
+
+    * Puzzle image. 
+      The game starts always with the easiest level "Mario" image and 3 x 3 layout. 
+      It makes it easy for small children to get familiar with the game.
+      With the left click and hold of the mouse or finger touch and hold on mobile devices,
+      the player can move and swap puzzle pieces around the game field.
+
+ 2. Game control field:
+
+    * Time and Step section:
+      Displaying timer and number of moves when players moving a puzzle pieces.
+      The timer automatically starts as soon as the game open. 
+      The player can renew a timer and start it from zero just clicking on the puzzle image button.
+      Step counting starts as soon as the first puzzle piece moved.
+
+ 3. Rules and Audio section: 
+
+    * The question mark icon is responding on mouse click or finger touch on mobile devices. 
+      A Modal window with a short game instruction will pop up.
+      Audio On/Off icon - responding on mouse click or finger touch on mobile devices.
+      Making game sound on/off. 
+      
+  4. Puzzle images section:
+     * Big buttons representing images of the puzzle. 
+      Responding on mouse click or finger touch on mobile devices.  
+      Easy to choose and swap between images.
+      
+  5. Game levels section: 
+     * Radio check buttons. 
+     Responding on mouse click or finger touch on mobile devices. 
+     The Player can choose between  "Easy"- 3x3, "Medium"- 4x4, and "Hard"- 5x5 puzzle layout. 
+    
+#### Main Screen
+
+   ![Main Screen](assets/images/images_for_readme/main_screen_1.png)
+   
+
+#### Game Rules Screen
+    
+   ![Game Rules](assets/images/images_for_readme/main_screen_2.png)
+
+
+#### Puzzle complete display:
+
+   * Game field :
+      Completed puzzle image. 
+      Modal window:
+      Congratulation text. Time and amount of steps.
+      Button "Play again" responding on mouse click or finger touch on mobile devices will bring the player back to the main screen.
+
+#### Puzzle complete Screen
+
+  ![Puzzle completed Screen](assets/images/images_for_readme/main_screen_3.png)
+
+#### Mobile devices Screen 
+  
+  ![Mobile Screen](assets/images/images_for_readme/mobile_screen_1.png)
+  ![Mobile Screen](assets/images/images_for_readme/mobile_screen_2.png)
+
+
+
+### [Features Left to Implement](#features-left-to-implement)
+
+1. Saving game results.
+   Add a "Results" button to the game control menu.
+   Numbering images for the playing layout
+   After the end of the game, a window pops up asking "Save the result? Yes No"
+   If “No”, the window closes and the main display opens.
+   If "Yes", a text appears asking you to enter a name or nickname.
+   The player’s name is saved with the number of puzzle images, difficulty level, time and steps.
+
+2. Add additional difficulty levels. The code must be added in script.js.
+    Visually in the game menu "Easy" "Medium" "Hard" can be replaced with "3x3", "4x4", "5x5" and extra "6x6", "7x7", "8x8".
+
+3. Add additional images.
+   When expanding the game and moving to a larger selection of possible images for the playing field, remove the buttons with pictures by replacing them with the list of possible images. The player can select an image with the radio check button from the list.
+   Or use the button "Next Image". Which will switch to the next picture
+   The main code for the game logic must be changed in script.js.
+
+
+
+
+### [Technologies Used](#technologies-used)
+This project uses HTML, CSS and JavaScript programming languages.
+
+#### [Balsamiq]()
+The project uses Balsamiqo to build wireframes in the planning stage of development.
+#### [GitPod]()
+The project uses GitPod to build the website.
+#### [JQuery]()
+The project uses JQuery to simplify DOM manipulation.
+#### [jQuery UI]()
+The project uses jQuery UI to use events for a puzzle.
+#### [Bootstrap]()
+The project uses the Bootstrap framework to help create a responsive design
+#### [FontAwesome]()
+The project uses  FonAwesome to provide icons.
+#### [Google Fonts]()
+The project uses Google fonts to style the website fonts.
+#### [GitHub]()
+This project uses GitHub to store and share all project code remotely.
+#### [jQuery UI Touch Punch]()
+As touch Event Support for jQuery UI
+#### [Browserstack]()
+The project used Browserstack to test functionality on all browsers and devices.
+#### [AutoPrefixer]()
+The project used AutoPrefixer to add prefixes in the CSS for cross-browser support.
+#### [Google Chrome - Dev Tools]()
+The project used Google Chrome - Dev Tools to test responsiveness and to debug code.
+#### [Favicon generator]()
+The project uses Favicon generator to create a puzzle favicon
+
+### [Testing]()
+Testing information can be found in separate testing.md file
+
+Automated Testing
+Validation Tools
+These tools were used to test the validity of the code for this project:
+
+W3C HTML Validator was used to validate HTML.
+W3C CSS validator was used to validate CSS.
+JSHint was used to validate JavaScript.
+
+
+
+## [Disclaimer]()
+This project is for educational purposes only.
+
+
+
+
+
+
 

@@ -137,7 +137,7 @@ let puzzleGame ={
         /*this.tick();*/
         this.buildImage(puzzleImages, gameField);
         this.swap("ul li");
-        
+        $("ul li").shuffle();
         },
  
 
@@ -186,14 +186,16 @@ let puzzleGame ={
                 var $draggableLi = $(ui.draggable).clone().replaceAll(this);
                 $(this).replaceAll(ui.draggable); 
                 playDropLi();
-                liArray = $("li").map(function () {
-                  return $(this).attr("data-value");});
-                /*liArray = $("li").map(function () {
-                  return $(this).attr("data-value");}),*/
+                
+                
+                liArray = $("li").map(function () { return $(this).attr("data-value"); });
+               
                 
              //Return an array with the data-value of "li"
              //https://api.jquery.com/map/
+
              if (isSorted(liArray)){
+                 $('.list-group').empty().html($('#puzzleCompleted').html());
                  playWinner();
                 $('ul>li').css({ "border": "none" });
                  $('.list-group').empty().html($('#puzzleCompleted').html());
@@ -213,14 +215,16 @@ let puzzleGame ={
                 
                  puzzleGame.swap(this);
                 puzzleGame.swap($draggableLi);
-                }})
+                }});
    }
             
    
 
 
 
-   }
+   };
+      
+
       
 
 
@@ -242,9 +246,16 @@ let puzzleGame ={
 
         
     ////*Randomize a sequence of elements with jQuery from https://stackoverflow.com/questions/1533910/randomize-a-sequence-of-div-elements-with-jquery*/
+function isSorted(arr) {
+    for (var i = 0; i < arr.length - 1; i++) {
+        if (arr[i] != i)
+            return false;
+    }
+    return true;
 
+}
  
-function isSorted(arr){
+/*function isSorted(arr){
     if (arr[0] < arr[1]){
         return isSorted(arr.splice(0, 1));
     } else if (arr[0] > arr[1]){
@@ -252,7 +263,7 @@ function isSorted(arr){
     } else if (arr[1] === undefined){
         return true;
     }
-};
+};*/
 
 
 /*---Resizing the screen will make window pop up. The best way I found right now to fix problem with puzzle on small screens. 
