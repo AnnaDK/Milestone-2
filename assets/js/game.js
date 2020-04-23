@@ -167,7 +167,7 @@ let puzzleGame ={
                 .height(puzzleWidth / n)
                  $("ul").append(li);
          }
-          $("ul").randomize("li");
+          $("ul").shuffle("li");
       
          },   
 
@@ -224,9 +224,19 @@ let puzzleGame ={
       
 
 
-    
-    
-                
+  $.fn.shuffle = function() {
+    $.each(this.get(), function(_index, el) {
+        var $el = $(el);
+        var $find = $el.children();
+
+        $find.sort(function() {
+            return 0.5 - Math.random();
+        });
+
+        $el.empty();
+        $find.appendTo($el);
+    });
+};
 
                  
 
