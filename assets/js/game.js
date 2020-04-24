@@ -207,10 +207,10 @@ let puzzleGame ={
                    }
                 else {
                      
-                    var now = new Date().getTime();
+                    var start = new Date().getTime();
                     puzzleGame.stepCount++;
                     $(".countingSteps").text(puzzleGame.stepCount);
-                    $(".countingTime").text(parseInt((now - puzzleGame.startTime) / 1000, 10));
+                    $(".countingTime").text(parseInt((start - puzzleGame.startTime) / 1000, 10));
                    
                 }
                 
