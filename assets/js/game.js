@@ -195,6 +195,8 @@ let puzzleGame ={
              //https://api.jquery.com/map/
 
              if (isSorted(liArray)){
+                 $( "li" ).draggable({
+                 disabled: true });
                  $('.list-group').empty().html($('#puzzleCompleted').html());
                  playWinner();
                 $('ul>li').css({ "border": "none" });
