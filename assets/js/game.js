@@ -216,14 +216,38 @@ let puzzleGame ={
                  puzzleGame.swap(this);
                 puzzleGame.swap($draggableLi);
                 }});
-   }
+   },
+   /* tick() function to use in games 
+setTimeout(function, milliseconds)
+Executes a function, after waiting a specified number of milliseconds.
+The first parameter is a function to be executed.
+The second parameter indicates the number of milliseconds before execution.
+JavaScript Timing Events https://www.w3schools.com/js/js_timing.asp
+Elapsed time is simply the amount of time that passes from the beginning of an event to its end.
+parseInt -  change to string
+$('#timer').text() just display it in the game*/
+
+    tick: function () {
+        var start = +new Date();
+        var elapsed = parseInt((start - puzzleGame.startTime) / 1000, 10);
+        
+        $('#timer').text(elapsed);
+        window.setTimeout("puzzleGame.tick()", 1000);
+    },
+
+
+
+
+};
+
+
+
             
    
 
 
 
-   };
-      
+ 
 
       
 
