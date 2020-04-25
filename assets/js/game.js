@@ -128,17 +128,19 @@ function muteAudio() {
  //How to buid a game object reference: https://www.w3schools.com/graphics/game_canvas.asp
 // 
 
-let puzzleGame ={
+let puzzleGame = {
     startTime: new Date().getTime(),
     countingSteps: 0,
-    loadingGame: function(puzzleImages, gameField){
+    loadingGame: function (puzzleImages, gameField) {
         this.stepCount = 0;
         this.startTime = new Date().getTime();
-        /*this.tick();*/
+        this.tick();
         this.buildImage(puzzleImages, gameField);
         this.swap("ul li");
+        //this.results();
         $("ul li").shuffle();
-        },
+    },
+
  
 
     buildImage: function (puzzleImages, gameField) {
@@ -209,9 +211,10 @@ let puzzleGame ={
                      
                     var start = new Date().getTime();
                     puzzleGame.stepCount++;
-                    $(".countingSteps").text(puzzleGame.stepCount);
+                    $("#counting_Steps").text(puzzleGame.stepCount);
+                    $(".countingSteps").text(puzzleGame.stepCount+1);
                     $(".countingTime").text(parseInt((start - puzzleGame.startTime) / 1000, 10));
-                   
+
                 }
                 
                 
@@ -229,13 +232,14 @@ Elapsed time is simply the amount of time that passes from the beginning of an e
 parseInt -  change to string
 $('#timer').text() just display it in the game*/
 
-    tick: function () {
+     tick: function () {
         var start = +new Date();
         var elapsed = parseInt((start - puzzleGame.startTime) / 1000, 10);
         
         $('#timer').text(elapsed);
         window.setTimeout("puzzleGame.tick()", 1000);
     },
+
 
 
 
