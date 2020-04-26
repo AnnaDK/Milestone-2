@@ -23,34 +23,34 @@
 </head>
 
 <body>
-<!--Header-->
+	<!--Header-->
 	<div class="container">
 		<div class="heading flex-item">
 			<h1>Puzzle Game</h1>
 		</div>
 
-<!--Puzzle-->
+		<!--Puzzle-->
 		<div class="container section-one">
 			<ul id="sortable" class="sortable flex-item"></ul>
 		</div>
 
-        
-<!--Game Control-->
+
+		<!--Game Control-->
 		<div class="container section-two">
 			<div class="list-group flex-item">
 				<div class="list-group-item d-flex justify-content-around ">
 
-					<div id="steps">Steps: <span span id="counting_Steps">0</span>
+					<div id="steps">Steps: <span id="counting_Steps">0</span>
 					</div>
-					<div id="time">Time: <span id="timer">   </span>sec
+					<div id="time">Time: <span id="timer">   </span> sec
 					</div>
 				</div>
 
-                <div class="list-group-item d-flex justify-content-around ">
+				<div class="list-group-item d-flex justify-content-around ">
 
 					<button id="btnRule" type="button" class="btn  btn-outline-light btn-lg" aria-label="Rules" data-toggle="modal" data-target="#rulesModal"><i class="fas fa-question"></i></button>
-					<button id="btnRule" type="button" class="btn  btn-outline-light btn-lg" aria-label="Results" data-toggle="modal" data-target="#resultsModal"><i class="fas fa-star"></i></button>
-                    <button type="button" id="muteButton" class="btn  btn-outline-light btn-lg " aria-label="Mute_Button">
+					<button id="btnResults" type="button" class="btn  btn-outline-light btn-lg" aria-label="Results" data-toggle="modal" data-target="#resultsModal"><i class="fas fa-star"></i></button>
+					<button type="button" id="muteButton" class="btn  btn-outline-light btn-lg " aria-label="Mute_Button">
                     <i class="fas fa-volume-up sound"></i> <i class="fas fa-volume-mute sound"  style="display: none"></i> </button>
 
 				</div>
@@ -78,21 +78,21 @@
 						<input type="radio" name="level" id="hard" class="check_btn" value="5" />
 						<label for="hard">Hard</label>
 					</div>
-	             </div>
+				</div>
 
 			</div>
 		</div>
-        
-        <!--Footer-->
-        <div class="footer flex-item" style="flex-shrink: 0">
+
+		<!--Footer-->
+		<div class="footer flex-item">
 			<a href="https://github.com/AnnaDK/Puzzle-Game"><i class="fab fa-github-alt"></i></a>
 		</div>
 	</div>
 
-	
+
 
 	<!--Puzzle Completed-->
-	<div class="container" id="puzzleCompleted" style="display:none;">
+	<div class="flex-item" id="puzzleCompleted" style="display:none;">
 		<div class="puzzleCompleted_style  flex-item">
 			<h2 style="text-align:center">Hooray !!</h2>
 			You have completed this picture.
@@ -101,15 +101,15 @@
 			<br />
                 Time Taken: <span class="countingTime">0</span> seconds<br />
 
-                For saving your results press "Save"
+
 			<div>
-                 <button type="button"  class="playAgain btn btn-light" data-toggle="modal" data-target="#saveModal"> Save </button>
+
 				<button type="button"  class="playAgain btn btn-light" onclick="window.location.reload(true);"> Play Again </button>
 			</div>
 		</div>
 	</div>
 	<!--Puzzle Reset-->
-	<div class="container" id="puzzleReset" style="display:none;">
+	<div class="flex-item" id="puzzleReset" style="display:none;">
 		<div class="puzzleReset_style  flex-item">
 			<h2 style="text-align:center"> Press the button to start the game</h2>
 
@@ -125,11 +125,11 @@
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="container">
-					
 
-							<p> Drag and drop the image pieces to make the image complete.<br/>
+
+					<p> Drag and drop the image pieces to make the image complete.<br/>
                                 The number of steps and the time will be counted </p>
-						
+
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn  btn-outline-light btn-lg" data-dismiss="modal"><i class="fas fa-times"></i></button>
@@ -138,34 +138,6 @@
 		</div>
 	</div>
 
-<!--Modal Results-->
-	<div class="modal fade modalData" id="resultsModal" tabindex="-1" role="dialog" aria-label="Results" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="container">
-                <h3>Game Results</h3>
-				<ol id="scoresList">
-                <div id="isOutPut"> 
-                <span class="playerNname"> </span>
-			<br />
-               <span class="gameLevel"> </span>
-               <br />
-               Steps:<span class="playerSteps"> </span>
-               <br/>
-               Time: <span class="playerTime"> </span>
-					</div>
-                </ol>
-                	
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn  btn-outline-light btn-lg" data-dismiss="modal"><i class="fas fa-times"></i></button>
-				</div>
-			</div>
-		</div>
-	</div>
-<script>
-
-</script>
 
 	<!-- AUDIO FILES -->
 	<audio id="step_0" src="assets/audio/step_0.wav"></audio>
