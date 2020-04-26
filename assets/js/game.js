@@ -7,7 +7,7 @@ let mario_toad = [{ src: "assets/images/puzzle_images/mario_toad.jpg" }];
 
 let puzzleImages = [mario, mario_luigi, mario_team, mario_toad];
 
-let timerFunction;
+
 
 //----------------Loading the game . Chooising a level and the puzzle image.
 
@@ -124,8 +124,9 @@ function muteAudio() {
 
 }
 
- //Building game object
- //How to buid a game object reference: https://www.w3schools.com/graphics/game_canvas.asp
+
+//Building game object
+//How to buid a game object reference: https://www.w3schools.com/graphics/game_canvas.asp
 // 
 
 let puzzleGame = {
@@ -137,20 +138,17 @@ let puzzleGame = {
         this.tick();
         this.buildImage(puzzleImages, gameField);
         this.swap("ul li");
-        //this.results();
         $("ul li").shuffle();
     },
 
- 
-
     buildImage: function (puzzleImages, gameField) {
-       n = gameField|| 4;
+        n = gameField || 4;
         if (window.matchMedia('(min-width: 575.98px)').matches) {
-           puzzleWidth = 400;
-          
+            puzzleWidth = 400;
+
         } else {
-           puzzleWidth = 300;
-           
+            puzzleWidth = 300;
+
         }
         var percent = 100 / (n - 1);
         let loadImage = puzzleImages[0];
@@ -161,20 +159,20 @@ let puzzleGame = {
             var li = $('<li class ="item" data-value="' + (i) + '"></li>');
             (li).css({
                 background: 'url(' + loadImage.src + ')',
-                backgroundSize:(n * 100) + '%',
+                backgroundSize: (n * 100) + '%',
                 backgroundPosition: x + ' ' + y,
-                
-            })                            
+
+            })
                 .width(puzzleWidth / n)
                 .height(puzzleWidth / n)
-                 $("ul").append(li);
-         }
-          $("ul").shuffle("li");
-      
-         },   
+            $("ul").append(li);
+        }
+        $("ul").shuffle("li");
 
-  
-   swap: function () {
+    },
+   
+
+    swap: function () {
         $("li").draggable({
             snap: "#droppable",
             snapMode: "outer",
@@ -183,46 +181,46 @@ let puzzleGame = {
         });
         /*The replaceAll() method is an inbuilt method in jQuery which is used to replace selected elements with new HTML elements. Parameters: This method accepts two parameter as mentioned above and described below: content: It is the required parameter which is used to specify the content to insert.*/
         /*drop jQuery ui event*/
-        $("li").droppable({ 
-                drop: function( event, ui ) {
+        $("li").droppable({
+            drop: function (event, ui) {
                 var $draggableLi = $(ui.draggable).clone().replaceAll(this);
-                $(this).replaceAll(ui.draggable); 
+                $(this).replaceAll(ui.draggable);
                 playDropLi();
-                
-                
-                liArray = $("li").map(function () { return $(this).attr("data-value"); });
-               
-                
-             //Return an array with the data-value of "li"
-             //https://api.jquery.com/map/
+                 puzzleGame.stepCount++;
 
-             if (isSorted(liArray)){
-                 $( "li" ).draggable({
-                 disabled: true });
-                 $('.list-group').empty().html($('#puzzleCompleted').html());
-                 playWinner();
-                $('ul>li').css({ "border": "none" });
-                 $('.list-group').empty().html($('#puzzleCompleted').html());
+
+                liArray = $("li").map(function () { return $(this).attr("data-value"); });
+
+
+                //Return an array with the data-value of "li"
+                //https://api.jquery.com/map/
+
+                if (isSorted(liArray)) {
+                    $( "li" ).draggable({
+                    disabled: true});
+                    $('.list-group').empty().html($('#puzzleCompleted').html());
+                    playWinner();
+                    
+                    $('ul>li').css({ "border": "none" });
+                    $('.list-group').empty().html($('#puzzleCompleted').html());
+                
                     //the  puzzle borders gone as soon as puzzle complete for clear image
-            
-                     
-                   }
+                  }
                 else {
-                     
-                    var start = new Date().getTime();
-                    puzzleGame.stepCount++;
+                   
+                    var start= new Date().getTime();
                     $("#counting_Steps").text(puzzleGame.stepCount);
                     $(".countingSteps").text(puzzleGame.stepCount+1);
                     $(".countingTime").text(parseInt((start - puzzleGame.startTime) / 1000, 10));
-
-                }
-                
-                
-                 puzzleGame.swap(this);
+}
+                puzzleGame.swap(this);
                 puzzleGame.swap($draggableLi);
-                }});
-   },
-   /* tick() function to use in games 
+            }
+        });
+    },
+   
+
+/* tick() function to use in games 
 setTimeout(function, milliseconds)
 Executes a function, after waiting a specified number of milliseconds.
 The first parameter is a function to be executed.
@@ -232,38 +230,23 @@ Elapsed time is simply the amount of time that passes from the beginning of an e
 parseInt -  change to string
 $('#timer').text() just display it in the game*/
 
-     tick: function () {
+    tick: function () {
         var start = +new Date();
         var elapsed = parseInt((start - puzzleGame.startTime) / 1000, 10);
         
         $('#timer').text(elapsed);
         window.setTimeout("puzzleGame.tick()", 1000);
     },
-
-
-
-
-
 };
-
-
-
-            
-   
-
-
 
  
 
-      
-
-
-  $.fn.shuffle = function() {
-    $.each(this.get(), function(_index, el) {
+$.fn.shuffle = function () {
+    $.each(this.get(), function (_index, el) {
         var $el = $(el);
         var $find = $el.children();
 
-        $find.sort(function() {
+        $find.sort(function () {
             return 0.5 - Math.random();
         });
 
@@ -272,19 +255,22 @@ $('#timer').text() just display it in the game*/
     });
 };
 
-                 
 
-        
-    
-    function isSorted(arr) {
- for (var i = 0; i < arr.length - 1; i++) {
+
+
+
+
+
+function isSorted(arr) {
+    for (var i = 0; i < arr.length - 1; i++) {
         if (arr[i] != i)
             return false;
     }
     return true;
 
 }
- 	
+
+
 
 
 /*---Resizing the screen will make window pop up. The best way I found right now to fix problem with puzzle on small screens. 
@@ -297,14 +283,14 @@ $(window).resize(function () {
     if (window.matchMedia('(min-width: 575.98px)').matches) {
         $('#sortable').empty().html($('#puzzleReset').html());
 
-    } 
+    }
     return false;
 });
 
 /*--Modal--*/
 $('#myModal').modal('handleUpdate');
 
-   
+
 
 
 
