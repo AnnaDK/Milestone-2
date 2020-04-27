@@ -246,23 +246,10 @@ $('#timer').text() just display it in the game*/
  
 
 $.fn.shuffle = function () {
-    $.each(this.get(), function (_index, el) {
-        var $el = $(el);
-        var $find = $el.children();
-
-        $find.sort(function () {
-            return 0.5 - Math.random();
-        });
-
-        $el.empty();
-        $find.appendTo($el);
-    });
-};
-
-
-
-
-
+    var ul = document.querySelector('ul');
+for (var i = ul.children.length; i >= 0; i--) {
+    ul.appendChild(ul.children[Math.random() * i | 0]);
+}};
 
 
 function isSorted(arr) {
@@ -278,8 +265,10 @@ function isSorted(arr) {
 
 
 /*---Resizing the screen will make window pop up. The best way I found right now to fix problem with puzzle on small screens. 
-Code will be changed in future if will find better solution
-More explanation in README.md--*/
+Code will be changed in future if i will find better solution
+More explanation in README.md
+reference about  Window.matchMedia() at https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia
+--*/
 
 
 $(window).resize(function () {
@@ -291,8 +280,7 @@ $(window).resize(function () {
     return false;
 });
 
-/*--Modal--*/
-$('#myModal').modal('handleUpdate');
+
 
 
 

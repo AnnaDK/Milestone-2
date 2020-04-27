@@ -28,12 +28,12 @@
 
 4. Sortable, Draggable and Droppable jQuery UI
    [How jQuery UI Works](https://learn.jquery.com/jquery-ui/how-jquery-ui-works/)
-   [jQuery & jQuery UI Documentation: book PDF](https://documentation.help/jQuery-UI/documentation.pdf)
+   jQuery & jQuery UI Documentation: [book PDF](https://documentation.help/jQuery-UI/documentation.pdf)
    [Sortable jQuery UI](https://jqueryui.com/sortable/)
    [Draggable jQuery UI](https://jqueryui.com/draggable/)
    [Droppable jQuery UI](https://jqueryui.com/droppable/)
-   [Implementing Drag and Drop Using jQuery Library youtube.com](https://www.youtube.com/watch?v=peWrZD0meTs)
-   [Drag drop and calculating width]
+   [Implementing Drag and Drop Using jQuery Library:youtube.com](https://www.youtube.com/watch?v=peWrZD0meTs)
+   [Getting jQuery sortable, droppable and draggable to work together: stackoverflow ](https://stackoverflow.com/questions/5794574/getting-jquery-sortable-droppable-and-draggable-to-work-together)
 
 5. jQuery UI Touch Punch
    [Touch Event Support for jQuery UI : touchpunch](http://touchpunch.furf.com/)
@@ -47,7 +47,13 @@
    [JavaScript Timing Events: w3schools ](https://www.w3schools.com/js/js_timing.asp)
    JavaScript can be executed in time-intervals. Timing events.
 
-7. 
+7. [Shuffle Children: css tricks](https://css-tricks.com/snippets/jquery/shuffle-children/)
 
 
--.[HTML5 Custom Data Attributes (data-*)](http://html5doctor.com/html5-custom-data-attributes/)
+8. [HTML5 Custom Data Attributes (data-*)](http://html5doctor.com/html5-custom-data-attributes/)
+   [.map() method](https://api.jquery.com/map/)
+   is particularly useful for getting or setting the value of a collection of elements
+
+9.[Window.matchMedia(): mozilla.org](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia)
+  The Window interface's matchMedia() method returns a new MediaQueryList object representing the parsed results of the specified media query string. The returned MediaQueryList can then be used to determine if the Document matches the media query,
+  or to monitor a document to detect when it matches or stops matching the media query.   
