@@ -47,13 +47,14 @@
    [JavaScript Timing Events: w3schools ](https://www.w3schools.com/js/js_timing.asp)
    JavaScript can be executed in time-intervals. Timing events.
 
-7. [Shuffle Children: css tricks](https://css-tricks.com/snippets/jquery/shuffle-children/)
-
-
-8. [HTML5 Custom Data Attributes (data-*)](http://html5doctor.com/html5-custom-data-attributes/)
+7. [HTML5 Custom Data Attributes (data-*)](http://html5doctor.com/html5-custom-data-attributes/)
    [.map() method](https://api.jquery.com/map/)
    is particularly useful for getting or setting the value of a collection of elements
 
-9.[Window.matchMedia(): mozilla.org](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia)
+8.[Window.matchMedia(): mozilla.org](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia)
   The Window interface's matchMedia() method returns a new MediaQueryList object representing the parsed results of the specified media query string. The returned MediaQueryList can then be used to determine if the Document matches the media query,
   or to monitor a document to detect when it matches or stops matching the media query.   
+
+9.[Function to randomize li elements in the puzzle :stackoverflow](https://stackoverflow.com/questions/7070054/javascript-shuffle-html-list-element-order/39492527#39492527)
+  [Fisher–Yates shuffle: wikipedia](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle*/)
+  Another way to write shuffle function based on [Shuffle Children: css tricks](https://css-tricks.com/snippets/jquery/shuffle-children/)

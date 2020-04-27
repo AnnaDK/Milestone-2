@@ -1,6 +1,6 @@
 
 
-![responsive Screens]()
+![responsive Screens]()(assets/images/images_for_readme/ms2_responsive.png)
 
 
 # PUZZLE GAME
@@ -101,7 +101,7 @@ Mario-Toad: A lot of details, small objects, randomly positioned around an image
 
 The wireframes were created using  [Balsamiq Wireframes](https://balsamiq.com/).
 
-Web site design and mobile display [here](assets/wireframes/wireframes_puzzle_game.pdf)
+Web site design and mobile display [here](assets/references/wireframes_images/wireframes_puzzle.pdf)
 
 ----------------------------------------------------------------------
 
@@ -149,32 +149,29 @@ Title of the game
     
 #### Main Screen
 
-   ![Main Screen](assets/images/images_for_readme/main_screen_1.png)
+   ![Main Screen](assets/images/images_for_readme/ms2_main.png)
    
-
-#### Game Rules Screen
-    
-   ![Game Rules](assets/images/images_for_readme/main_screen_2.png)
-
 
 #### Puzzle complete display:
 
    * Game field :
       Completed puzzle image. 
-      Modal window:
+      New html element replacing game-comtrol field:
       Congratulation text. Time and amount of steps.
       Button "Play again" responding on mouse click or finger touch on mobile devices will bring the player back to the main screen.
 
 #### Puzzle complete Screen
 
-  ![Puzzle completed Screen](assets/images/images_for_readme/main_screen_3.png)
+  ![Puzzle completed Screen](assets/images/images_for_readme/ms2_hooray.png)
 
 #### Mobile devices Screen 
   
-  ![Mobile Screen](assets/images/images_for_readme/mobile_screen_1.png)
-  ![Mobile Screen](assets/images/images_for_readme/mobile_screen_2.png)
+  ![Mobile Screen](assets/images/images_for_readme/mobile_gamecontrol.png)
+  ![Mobile Screen](assets/images/images_for_readme/mobile_restart.png)
 
-
+#### Tablet Screen
+    
+   ![Game Winner](assets/images/images_for_readme/ms2_tablet.png)
 
 ### [Features Left to Implement](#features-left-to-implement)
 

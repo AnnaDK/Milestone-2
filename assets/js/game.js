@@ -199,7 +199,7 @@ let puzzleGame = {
                 //Return an array with the data-value of "li"
                 //https://api.jquery.com/map/
 
-                if (isSorted(liArray)) {
+                if ( isSorted(liArray)) {
                     $( "li" ).draggable({
                     disabled: true});
                     $('.list-group').empty().html($('#puzzleCompleted').html());
@@ -246,7 +246,9 @@ $('#timer').text() just display it in the game*/
  
 /* function to randomize li elements in the puzzle
 code from stackoverflow https://stackoverflow.com/questions/7070054/javascript-shuffle-html-list-element-order/39492527#39492527
-and based on Fisher–Yates shuffle https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle*/
+and based on Fisher–Yates shuffle https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+another function is also working and I was using it is Shuffle Children from css tricks https://css-tricks.com/snippets/jquery/shuffle-children/
+*/
 
 $.fn.shuffle = function () {
     var ul = document.querySelector('ul');
@@ -254,13 +256,13 @@ for (var i = ul.children.length; i >= 0; i--) {
     ul.appendChild(ul.children[Math.random() * i | 0]);
 }};
 
-/*function to check if our puzzle is sorted. We have to loop through arraay and compare the values.
+/*--function to check if our puzzle is sorted. We have to loop through arraay and compare the values.
 after trying more methods this one only work without fail. 
  "Check if all values of array are equal" https://stackoverflow.com/questions/14832603/check-if-all-values-of-array-are-equal*/
- 
-function isSorted(arr) {
- for (let i = 0; i < arr.length-1; i++) {
-      if (arr[i] != i) {
+
+function isSorted(array) {
+ for (let i = 0; i < array.length-1; i++) {
+      if (array[i] != i) {
         return false;
       }
     }
@@ -270,11 +272,11 @@ function isSorted(arr) {
 
 
 
-/*---Resizing the screen will make window pop up. The best way I found right now to fix problem with puzzle on small screens. 
+/*--Resizing the screen will make window pop up. The best way I found right now to fix problem with puzzle on small screens. 
 Code will be changed in future if i will find better solution
 More explanation in README.md
 reference about  Window.matchMedia() at https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia
---*/
+*/
 
 
 $(window).resize(function () {
