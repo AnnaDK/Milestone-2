@@ -140,7 +140,11 @@ let puzzleGame = {
         this.swap("ul li");
         $("ul li").shuffle();
     },
-
+    /*Functionality that will build broken image for puzzle.
+    Get the number of columns and rows. Get the puzzle width. Empty the element for the game.  Loop over the columns and row to create each
+     of the pieces.Set the background image of each li. Assign data attribute(it allow us to store extra information on standard, semantic HTML elements)  
+     Set the css properties. Add to the DOM. Use function to shuffle elemens.
+	*/		
     buildImage: function (puzzleImages, gameField) {
         n = gameField || 4;
         if (window.matchMedia('(min-width: 575.98px)').matches) {
@@ -155,7 +159,7 @@ let puzzleGame = {
         $("ul").empty();
         for (var i = 0; i < n * n; i++) {
             var x = (percent * (i % n)) + "%";
-            var y = (percent * Math.floor(i / n)) + "%";/* data-* attributes allow us to store extra information on standard, semantic HTML elements*/
+            var y = (percent * Math.floor(i / n)) + "%";
             var li = $('<li class ="item" data-value="' + (i) + '"></li>');
             (li).css({
                 background: 'url(' + loadImage.src + ')',

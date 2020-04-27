@@ -34,6 +34,7 @@ Collecting puzzles promotes the development of figurative and logical thinking, 
 The complexity of the puzzle within the same number of elements is determined by the pattern, and the main criterion is the number of elements itself - the higher it is, the puzzle is bigger and more complex.
 
 ### [Player goals](#player-goals)
+
  Player goals:
 
 - Attractive design for kids
