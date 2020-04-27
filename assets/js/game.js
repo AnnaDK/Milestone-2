@@ -244,6 +244,9 @@ $('#timer').text() just display it in the game*/
 };
 
  
+/* function to randomize li elements in the puzzle
+code from stackoverflow https://stackoverflow.com/questions/7070054/javascript-shuffle-html-list-element-order/39492527#39492527
+and based on Fisher–Yates shuffle https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle*/
 
 $.fn.shuffle = function () {
     var ul = document.querySelector('ul');
@@ -251,15 +254,18 @@ for (var i = ul.children.length; i >= 0; i--) {
     ul.appendChild(ul.children[Math.random() * i | 0]);
 }};
 
-
+/*function to check if our puzzle is sorted. We have to loop through arraay and compare the values.
+after trying more methods this one only work without fail. 
+ "Check if all values of array are equal" https://stackoverflow.com/questions/14832603/check-if-all-values-of-array-are-equal*/
+ 
 function isSorted(arr) {
-    for (var i = 0; i < arr.length - 1; i++) {
-        if (arr[i] != i)
-            return false;
+ for (let i = 0; i < arr.length-1; i++) {
+      if (arr[i] != i) {
+        return false;
+      }
     }
     return true;
-
-}
+  }
 
 
 
