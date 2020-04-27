@@ -1,6 +1,6 @@
 
 
-![responsive Screens]()(assets/images/images_for_readme/ms2_responsive.png)
+![responsive Screens](assets/images/images_for_readme/ms2_responsive.png)
 
 
 # PUZZLE GAME
