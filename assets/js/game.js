@@ -290,8 +290,34 @@ $(window).resize(function () {
 
 
 
+            
+let contactForm = document.querySelector('#contact-form');
 
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const data = {
+            service_id: "gmail",
+            template_id: "contact_form",
+            user_id: "user_s4RVkzg99PAXo4f1SDiFd",
+            template_params: {
+                "name": contactForm.name.value,
+                "email": contactForm.email.value,
+                "message": contactForm.message.value
+            }
+        };
 
-
-
-
+        $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+            type: 'POST',
+            data: JSON.stringify(data),
+            contentType: 'application/json'
+        }).done(function () {
+            $('input').val('');
+            $('textarea').val('');
+            $("#contact-form").empty().html("<h3 style='padding-top:1em;'>Your email has been sent ! <br /> <button class='btn btn-outline-light'  onclick='window.location.reload(true);'><i class='fas fa-check'></i></button></h3>")
+            //alert('Your email has been sent successfully!');
+            //window.location.reload(true); 
+        }).fail(function (error) {
+            console.log('Oops... ' + JSON.stringify(error));
+            alert('Oops something went wrong, please try again');
+        });
+    }); 
