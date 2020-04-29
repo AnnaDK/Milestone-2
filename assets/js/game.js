@@ -294,9 +294,10 @@ all information found https://www.emailjs.com/
 Code written according documentation from https://www.emailjs.com/docs/rest-api/send/ 
 */
             
+
 let contactForm = document.querySelector('#contact-form');
 
-    contactForm.addEventListener('submit', (event) => {
+    contactForm.addEventListener('submit', function(event) {
         event.preventDefault();
         const data = {
             service_id: "gmail",
@@ -314,9 +315,7 @@ let contactForm = document.querySelector('#contact-form');
             data: JSON.stringify(data),
             contentType: 'application/json'
         }).done(function () {
-            $('input').val('');
-            $('textarea').val('');
-            $("#contact-form").empty().html("<h3 style='padding-top:1em;'>Your email has been sent ! <br /> <button class='btn btn-outline-light'  onclick='window.location.reload(true);'><i class='fas fa-check'></i></button></h3>")
+           $("#contact-form").empty().html("<h3 style='padding-top:1em;'>Your email has been sent ! <br /> <button class='btn btn-outline-light'  onclick='window.location.reload(true);'><i class='fas fa-check'></i></button></h3>")
 
         }).fail(function (error) {
             console.log('Oops... ' + JSON.stringify(error));

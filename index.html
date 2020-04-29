@@ -23,11 +23,11 @@
 
 	<!--email JS-->
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
+	<script type="text/javascript">
+		(function(){
       emailjs.init("user_s4RVkzg99PAXo4f1SDiFd");
    })();
-</script>
+	</script>
 </head>
 
 <body>
@@ -103,17 +103,14 @@
 	<div class="flex-item" id="puzzleCompleted" style="display:none;">
 		<div class="puzzleCompleted_style  flex-item">
 			<h2 style="text-align:center">Hooray !!</h2>
-			
-			You have completed this picture.
+            You have completed this picture.
 			<br />
                 Steps: <span class="countingSteps">0</span> steps.
 			<br />
-                Time Taken: <span class="countingTime">0</span> seconds<br />
-
-
-			<div>
-
-				<button type="button"  class="playAgain btn btn-light" onclick="window.location.reload(true);"> Play Again </button>
+                Time Taken: <span class="countingTime">0</span> seconds
+            <br />
+                <div>
+            <button type="button"  class="playAgain btn btn-light" onclick="window.location.reload(true);"> Play Again </button>
 			</div>
 		</div>
 	</div>
@@ -138,8 +135,8 @@
 
 					<p> Drag and drop the image pieces to make the image complete.<br/>
                                 The number of steps and the time will be counted <br/>
-                                <i class="far fa-star"></i> - Send us a message      
-                                </p>
+						<i class="far fa-star"></i> - Send us a message
+					</p>
 
 				</div>
 				<div class="modal-footer">
@@ -152,22 +149,22 @@
 	<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-label="User" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
-				
-                <form id="contact-form">
-                <h3>Contact Us</h3>
-                <div class="form-group">
-							<input type="text" name="name" class="form-control" maxlength="15" placeholder="Name" required>
-                            </div>
+
+				<form id="contact-form">
+					<h3>Contact Us</h3>
 					<div class="form-group">
-                     <input type="email" name="email" class="form-control"  placeholder="Email" required>
-                             </div>
-						
-							<div class="form-group">
-                            <textarea type="text" name="message" class="form-control"  rows="5" placeholder="Your Message" required></textarea>
+						<input type="text" name="name" class="form-control" maxlength="15" placeholder="Name" required>
                             </div>
-				
-					<button type="submit" value="Send" class="btn btn-outline-light btn-lg send" ><i class="fas fa-check"></i></button>
-					<button type="button" class="btn  btn-outline-light btn-lg" data-dismiss="modal"><i class="fas fa-times"></i></button>
+						<div class="form-group">
+							<input type="email" name="email" class="form-control"  placeholder="Email" required>
+                             </div>
+
+							<div class="form-group">
+								<textarea  name="message" class="form-control"  rows="5" placeholder="Your Message" required></textarea>
+							</div>
+
+							<button type="submit" value="Send" class="btn btn-outline-light btn-lg send" ><i class="fas fa-check"></i></button>
+							<button type="button" class="btn  btn-outline-light btn-lg" data-dismiss="modal"><i class="fas fa-times"></i></button>
 				</form>
 			</div>
 		</div>
