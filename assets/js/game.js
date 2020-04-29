@@ -22,10 +22,10 @@ https://www.tutorialrepublic.com/faq/how-to-get-the-value-of-selected-radio-butt
 
 $(function load() {
 
-    let gameField = $("#gameLevels :radio:checked").val(); 
+    let gameField = $("#gameLevels :radio:checked").val();
     puzzleGame.loadingGame(puzzleImages[0], gameField);
     let currentImage = puzzleImages[0];
-    $(".dashboard-btn").click(function () { 
+    $(".dashboard-btn").click(function () {
 
         $(this).toggleClass("active");
         let gameField = $("#gameLevels :radio:checked").val();
@@ -132,7 +132,7 @@ adding dgaggable and droppable events, shuffle.
 How to buid a game  i could learn at "Games & Visualizations khanacademy" https://www.khanacademy.org/computing/computer-programming/programming-games-visualizations,
  "Mastering jQuery UI" google books (https://books.google.nl/books?id=nFjTBgAAQBAJ&pg=PA24&dq=jQuery+puzzle&hl=en&sa=X&ved=0ahUKEwiR6c_4y4jpAhVNLewKHY9mA_kQ6AEIKDAA#v=onepage&q=jQuery%20puzzle&f=false
  and in Game tutorial from w3schools https://www.w3schools.com/graphics/game_intro.asp
-*/ 
+*/
 
 let puzzleGame = {
     startTime: new Date().getTime(),
@@ -189,8 +189,8 @@ let puzzleGame = {
     jQuery API documentation https://api.jqueryui.com/category/interactions/
     The replaceAll() https://api.jquery.com/replaceAll/ method is an inbuilt method in jQuery which is used to replace selected elements with new HTML elements. 
     Return an array with the data-value of "li" https://api.jquery.com/map/*/
-       
-    
+
+
     swap: function () {
         $("li").draggable({
             snap: "#droppable",
@@ -198,7 +198,7 @@ let puzzleGame = {
             revert: "invalid",
             helper: "clone"
         });
-       
+
         $("li").droppable({
             drop: function (event, ui) {
                 var $draggableLi = $(ui.draggable).clone().replaceAll(this);
@@ -219,7 +219,7 @@ let puzzleGame = {
                     $('ul>li').css({ "border": "none" });
                     $('.list-group').empty().html($('#puzzleCompleted').html());
 
-                
+
                 }
                 else {
 
