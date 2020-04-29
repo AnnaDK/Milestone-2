@@ -194,7 +194,7 @@ Title of the game
 
 
 
-### [Technologies Used](#technologies-used)
+## [Technologies Used](#technologies-used)
 This project uses HTML, CSS and JavaScript programming languages.
 
 #### [Balsamiq]()
@@ -223,9 +223,9 @@ The project used AutoPrefixer to add prefixes in the CSS for cross-browser suppo
 The project used Google Chrome - Dev Tools to test responsiveness and to debug code.
 #### [Favicon generator]()
 The project uses Favicon generator to create a puzzle favicon
-
-### [Testing]()
-Testing information can be found in separate testing.md file
+#### [EmailjS](https://www.emailjs.com/)
+To connect mail service to the web site and be able to receive feedback and messages from users.
+## [Testing]()
 
 Automated Testing
 Validation Tools
@@ -236,14 +236,16 @@ W3C CSS validator was used to validate CSS.
 JSHint was used to validate JavaScript.
 
 ## [Credits]()
-
-Code
 Text within this project was written by the developer.
-The game idea and game design was created by the developer.
-The HTML and CSS code was written by the developer (parts of code which not- marked by the comments)
-The Java Script code game logic and functionality was recreated using the tutorial from [Anurag Gandhi](https://www.codeproject.com/Articles/810978/Image-Puzzle-An-HTML-Game)
-All other credits, references on soursec and links are collected , organized and can be found in the document [references.md](https://baeea74b-ae43-4641-b1fb-8ff472146de7.ws-eu01.gitpod.io/files/download/?id=4aa294dc-baca-498a-aa72-4b12d45b89cf)
-Hope it will help other students
+
+#### Code
+
+* The game idea and game design was created by the developer.
+* The HTML and CSS code was written by the developer ,parts of code which not are marked by the comments.
+* The Java Script code game logic and functionality was recreated using the tutorial from [Anurag Gandhi](https://www.codeproject.com/Articles/810978/Image-Puzzle-An-HTML-Game)
+* All other credits, references on soursec and links are collected, organized and can be found in the document [references.md](https://baeea74b-ae43-4641-b1fb-8ff472146de7.ws-eu01.gitpod.io/files/download/?id=4aa294dc-baca-498a-aa72-4b12d45b89cf)
+  Hope it can help other students
+
 ## [Disclaimer]()
 The "Puzzle Game" project is created for educational purposes.
 
