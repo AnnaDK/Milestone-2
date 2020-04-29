@@ -183,7 +183,8 @@ let puzzleGame = {
             revert: "invalid",
             helper: "clone"
         });
-        /*The replaceAll() method is an inbuilt method in jQuery which is used to replace selected elements with new HTML elements. Parameters: This method accepts two parameter as mentioned above and described below: content: It is the required parameter which is used to specify the content to insert.*/
+        /*The replaceAll() https://api.jquery.com/replaceAll/ method is an inbuilt method in jQuery which is used to replace selected elements with new HTML elements. 
+        Parameters: This method accepts two parameter as mentioned above and described below: content: It is the required parameter which is used to specify the content to insert.*/
         /*drop jQuery ui event*/
         $("li").droppable({
             drop: function (event, ui) {
@@ -288,6 +289,13 @@ $(window).resize(function () {
     return false;
 });
 
+
+
+/* function reset form in modal window. */
+
+$("#resetBtn").click(function(){
+        $(".form-control").val("");
+       });
 
 /* Code for sending an email from user to developer.
 all information found https://www.emailjs.com/
