@@ -5,27 +5,29 @@
 ![responsive Screens](assets/images/images_for_readme/ms2_responsive.png)
 
 
-# PUZZLE GAME 
+# **PUZZLE GAME** 
 
 "Puzzle Game" is a fun puzzle for children. It has a choice of images for the game field, three levels of difficulty, child-friendly design, and easy control features. The game has a timer and a step counter.
 
-[Click To Play !](https://annadk.github.io/PuzzleGame/)
+## [Click To Play !](https://annadk.github.io/PuzzleGame/)
 
 ****
-## Table of Contents
+# **Table of Contents**
 
 
 ## 1. [UX](#ux) 
-   * ### [Project Goals](#project-goals)
-   * ### [Player Goals](#player-goals)
-   * ### [Developer Goals](#developer-goals)
-   * ### [User Stories](#user-stories)
-   * ### [Game Design](#game-design)
-   * ### [Wireframes](#wireframes)
+
+   - **[Project Goals](#project-goals)**
+   - **[Player Goals](#player-goals)**
+   - **[Developer Goals](#developer-goals)**
+   - **[User Stories](#user-stories)**
+   - **[Game Design](#game-design)**
+   - **[Wireframes](#wireframes)**
 
 ## 2. [Features](#features)
-   * ### [Existing Features](#existing-features)
-   * ### [Features Left To Implement](#features-left-to-implement)
+
+   - **[Existing Features](#existing-features)**
+   - **[Features Left To Implement](#features-left-to-implement)**
 
 ## 3. [Technologies Used](#technologies-used)
 
@@ -38,10 +40,10 @@
 
 ### [Project Goals](#project-goals)
 
-This game is designed for primary school children *. Collecting puzzles promotes the development of figurative and logical thinking, voluntary attention, perception, in particular, the distinction of individual elements in color, shape, and size.
+This game is designed for primary _school children_. Collecting puzzles promotes the development of figurative and logical thinking, voluntary attention, perception, in particular, the distinction of individual elements in color, shape, and size.
 Also, it teaches children how to perceive the connection between the part and whole The complexity of the puzzle within the same number of elements is determined by the pattern, and the main criterion is the number of elements itself - the higher it is, the puzzle is bigger and more complex.
 
-*(Dutch children begin school at age four-five)
+ * _Dutch children begin school at the age of four-five years old_ 
 
 ### [Player goals](#player-goals)
 
@@ -91,7 +93,7 @@ As a child who plays "Puzzle Game" I want:
 Famous "Super Mario" game chosen as a design reference for this project.
 Characters of the game recognizable and famous among children. Also the "Super Mario" theme suitable for both genders. 
 This project created is only for educational purposes for "Code Institute" and as a part of the developer portfolio.
-For commercial use of the game images for puzzle layout and the background image should be replaced.
+For commercial use of the game images for puzzle layout, dashboard buttons images  and the background image should be replaced.
 
 ##### Background
 
@@ -120,9 +122,9 @@ Web site design and mobile display [here](assets/references/wireframes_images/wi
 
 #### Main display
 
-Title of the game
+ 1. **Heading with the game title**.
 
- 1. Game field :
+ 2. **Game field** :
 
     * Puzzle image. 
       The game starts always with the easiest level "Mario" image and 3 x 3 layout. 
@@ -130,59 +132,39 @@ Title of the game
       With the left click and hold of the mouse or finger touch and hold on mobile devices,
       the player can move and swap puzzle pieces around the game field.
 
- 2. Game control field:
-
-    * Time and Step section:
-      Displaying timer and number of moves when players moving a puzzle pieces.
-      The timer automatically starts as soon as the game open. 
-      The player can renew a timer and start it from zero just clicking on the puzzle image button.
-      Step counting starts as soon as the first puzzle piece moved.
-
- 3. Rules, Contact and Audio section: 
-
-    * The question mark icon is responding on mouse click or finger touch on mobile devices. 
-      A Modal window with a short game instruction will pop up.
-    * The star icon On/ will open a "Contact Us" modal.
-      It gives the ability for users to contact the developer
-    * Audio On/Off icon - responding on mouse click or finger touch on mobile devices.
-      Making game sound on/off. 
+ 3. **Game control field**:
+    
+      Responding on mouse click or finger touch on mobile devices.
       
-  4. Puzzle images section:
-     * Big buttons representing images of the puzzle. 
-      Responding on mouse click or finger touch on mobile devices.  
-      Easy to choose and swap between images.
+      - Steps and Time display. The timer automatically starts as soon as the game loaded.
+      The user can renew a timer and start it from zero just clicking on the puzzle image button.
+      Step count starts from the first move of the puzzle piece. <br/>
       
-  5. Game levels section: 
-     * Radio check buttons. 
-     Responding on mouse click or finger touch on mobile devices. 
-     The Player can choose between  "Easy"- 3x3, "Medium"- 4x4, and "Hard"- 5x5 puzzle layout.   
+      - <i class="fas fa-question"></i> - Rules. Modal window.
+      Short explanation about the game.
+      
+      - <i class="fas fa-star"></i> - Contact Us. Modal window.
+      Contact form with 3 input fields. All fields are required. 
+      After sending a form - the notification window appear. 
+      
+      - <i class="fas fa-volume-up sound"></i> - Auio On/Off.
+      Allow user to make a sound on or off. The icon will change in response to the choice. 
+      
+      - Puzzle images section:
+        * Big buttons representing images of the puzzle. 
+          Responding on mouse click or finger touch on mobile devices.  
+          Easy to choose and swap between images.
+      
+      - Game levels section: 
+         * Radio check buttons. 
+           Responding on mouse click or finger touch on mobile devices. 
+           The Player can choose between  "Easy"- 3x3, "Medium"- 4x4, and "Hard"- 5x5 puzzle layout.   
 
 <p align="center">
    <img width="500" height="" src="assets/images/images_for_readme/ms2_main_screen.png">
 </p>
   
-   
-
-#### Puzzle complete display:
-
-   * Game field :
-      Completed puzzle image. 
-      New html element replacing game-comtrol field:
-      Congratulation text. Time and amount of steps.
-      Button "Play again" responding on mouse click or finger touch on mobile devices will bring the player back to the main screen.
-
-<p align="center">
-  <img width="500" height="" src="assets/images/images_for_readme/ms2_hooray.png">
-</p>
-
-  
-#### Mobile devices display
-
-* Main display. Puzzle. Responding on finger touch.
-* Game-Control section. Responding on finger touch.
-  * Steps and Time display. The timer starts as soon as the game loaded.
-    Step count starts from the first move of the puzzle piece.
-  * <p><i class="fas fa-question"></i></p> 
+  #### Mobile devices display
 
   
   <p align="center">
@@ -191,10 +173,27 @@ Title of the game
    <img width="150" p-2 height="" src="assets/images/images_for_readme/ms2_rules_mobile.png">
    <img width="150" p-2 height="" src="assets/images/images_for_readme/ms2_form_mobile.png">
 </p>
+   
+
+  #### Puzzle complete display:
+
+  1. **Game field** :
+     Completed puzzle image. <br/>
+     New HTML element replacing game-control field.
+     "Winner" audio playing.<br/>
+     Congratulation text. Time and amount of steps.<br/>
+     Button "Play again" responding on mouse click or finger touch on mobile devices will bring the user back to the main screen.
+
+<p align="center">
+  <img width="500" height="" src="assets/images/images_for_readme/ms2_hooray.png">
+</p>
+
 
  #### Tablet display 
 
-  [Game Winner](assets/images/images_for_readme/ms2_tablet.png)
+  <p align="center">
+  <img width="200" height="" src="assets/images/images_for_readme/ms2_tablet.png">
+  </p>
   
 
 
@@ -202,77 +201,80 @@ Title of the game
 
 ### [Features Left to Implement](#features-left-to-implement)
 
-1. Saving game results.
-   Add a "Results" button to the game control menu where is the Star icon. Keep Modal window, 
-   but create a score-table instead of "Contact Us" form
-   "Contact Us" feature can be moved to the footer.
-   Numbering images for the playing layout
-   After the end of the game, a window pops up asking "Save the result? Yes No"
-   If “No”, the window closes and the main display opens.
-   If "Yes", a text appears asking you to enter a name or nickname.
-   The player’s name is saved with the number of puzzle images, difficulty level, time, and steps.
+1.   Find a better solution for changing the size of the game field. Remove a reset game window.
+     More information and details can be found in [testing.md](assets/references/testing.md) 
 
-2. Add additional difficulty levels. The code must be added in script.js.
-   Visually in the game menu "Easy" "Medium" "Hard" can be replaced with 
-   "3x3", "4x4", "5x5" and extra "6x6", "7x7", "8x8" etc. added
+2. **Saving game results**.
+     Add a "Results" button to the game control menu where is the Star icon. Keep Modal window, 
+     but create a score-table instead of "Contact Us" form
+     "Contact Us" feature can be moved to the footer.
+     Numbering images for the playing layout
+     After the end of the game, a window pops up asking "Save the result? Yes No"
+     If “No”, the window closes and the main display opens.
+     If "Yes", a text appears asking you to enter a name or nickname.
+     The player’s name is saved with the number of puzzle images, difficulty level, time, and steps.
+     It can be used LocalStorage for saving the results.
 
-3. Add additional images.
-   When expanding the game and moving to a larger selection of possible images for the playing field, remove the buttons with pictures by replacing them with the list of possible images. The player can select an image with the radio check button from the list.
-   Or use the button "Next Image". Which will switch to the next picture
-   The main code for the game logic must be changed in script.js.
-   In index.html to replace section with dashboard-buttons with toggle-section "List of images"
+3. **Add additional difficulty levels**. 
+     The code must be added in script.js.
+     Visually in the game menu "Easy" "Medium" "Hard" can be replaced with 
+     "3x3", "4x4", "5x5" and extra "6x6", "7x7", "8x8" etc. added
+
+4. **Add additional images**.
+     When expanding the game and moving to a larger selection of possible images for the playing field, remove the buttons with pictures by replacing them with the list of possible images. The player can select an image with the radio check button from the list.
+     Or use the button "Next Image". Which will switch to the next picture
+     The main code for the game logic must be changed in script.js.
+     In index.html to replace the section with dashboard-buttons with toggle-section "List of images"
 
 
-## [Technologies Used](#technologies-used)
-This project uses HTML, CSS and JavaScript programming languages.
 
-#### [Balsamiq](https://balsamiq.com/)
-The project uses Balsamiqo to build wireframes in the planning stage of development.
-#### [GitPod](https://www.gitpod.io/)
-The project uses GitPod to build the website.
-#### [JQuery](https://jquery.com/)
-The project uses JQuery as JS library to make HTML document traversal and manipulative
-#### [jQuery UI](https://jqueryui.com/)
-The project uses jQuery UI to build functionaly of the game.
-#### [Bootstrap](https://getbootstrap.com/)
-The project uses the Bootstrap framework to help create some elements 
-#### [FontAwesome](https://fontawesome.com/)
-The project uses FonAwesome to use an icons from the library.
-#### [Google Fonts](https://fonts.google.com/)
-The project uses Google fonts to style the website fonts.
-#### [GitHub](https://github.com/)
-To store and share all project code remotely.
-#### [jQuery UI Touch Punch](http://touchpunch.furf.com/)
-As touch Event Support for jQuery UI
-#### [Browserstack](https://www.browserstack.com/)
-The project used Browserstack to test functionality on all browsers and devices.
-#### [AutoPrefixer](https://autoprefixer.github.io/)
-The project used AutoPrefixer to add prefixes in the CSS for cross-browser support.
-#### [Google Chrome - Dev Tools]
-The project used Google Chrome Dev Tools to debug code. Check responsiveness.
-#### [Favicon generator](https://favicon.io/)
-The project uses Favicon generator to create a puzzle favicon
-#### [EmailjS](https://www.emailjs.com/)
-To connect mail service to the web site and be able to receive feedback and messages from users.
-#### [Audio](https://freesound.org/)
-To download audio for project
-#### [Audio](https://www.noiseforfun.com/)
-To use audio for project from website
-#### [Color Hex Color Codes](https://www.color-hex.com/)
-To chooise colors and take a code for the project
-#### [Stackoverflow](https://stackoverflow.com/)
-To find a thouthand answers for a thouthand questions. 
+------------------------------------------------------------------------
+
+  ## [Technologies Used](#technologies-used)
+
+  This project uses HTML, CSS and JavaScript programming languages.
+
+  * **[Balsamiq](https://balsamiq.com/)** <br/>
+   The project uses Balsamiqo to build wireframes in the planning stage of development.
+  * **[GitPod](https://www.gitpod.io/)** <br/>
+   The project uses GitPod to build the website.
+  * **[JQuery](https://jquery.com/)**<br/>
+   The project uses JQuery as JS library to make HTML document traversal and manipulative
+  * **[jQuery UI](https://jqueryui.com/)**<br/>
+   The project uses jQuery UI to build functionaly of the game.
+  * **[Bootstrap](https://getbootstrap.com/)**<br/>
+   The project uses the Bootstrap framework to help create some elements 
+  * **[FontAwesome](https://fontawesome.com/)**<br/>
+   The project uses FonAwesome to use an icons from the library.
+  * **[Google Fonts](https://fonts.google.com/)**<br/>
+   The project uses Google fonts to style the website fonts.
+  * **[GitHub](https://github.com/)**<br/>
+   To store and share all project code remotely.
+  * **[jQuery UI Touch Punch](http://touchpunch.furf.com/)**<br/>
+   As touch Event Support for jQuery UI
+  * **[Browserstack](https://www.browserstack.com/)**<br/>
+   The project used Browserstack to test functionality on all browsers and devices.
+  * **[AutoPrefixer](https://autoprefixer.github.io/)**<br/>
+   The project used AutoPrefixer to add prefixes in the CSS for cross-browser support.
+  * **[Google Chrome - Dev Tools]()**<br/>
+   The project used Google Chrome Dev Tools to debug code. Check responsiveness.
+  * **[Favicon generator](https://favicon.io/)**<br/>
+   The project uses Favicon generator to create a puzzle favicon
+  * **[EmailJS](https://www.emailjs.com/)**<br/>
+   To connect mail service to the web site and be able to receive feedback and messages from users.
+  * **[Audio](https://freesound.org/)**<br/>
+   To download audio for project
+  * **[Audio](https://www.noiseforfun.com/)**<br/>
+   To use audio for project from website
+  * **[Color Hex Color Codes](https://www.color-hex.com/)**<br/>
+   To chooise colors and take a code for the project
+  * **[Stackoverflow](https://stackoverflow.com/)** <br/>
+   To find a thousand answers for a thousand questions.
 
 
 ## [Testing](#testing)
 
-Automated Testing
-Validation Tools
-These tools were used to test the validity of the code for this project:
 
-W3C HTML Validator was used to validate HTML.
-W3C CSS validator was used to validate CSS.
-JSHint was used to validate JavaScript.
 
 ### [Problems and Solutions](#problems)
 
