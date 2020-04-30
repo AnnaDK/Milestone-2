@@ -1,5 +1,7 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 
 # Interactive Frontend Development Milestone Project
+
 ![responsive Screens](assets/images/images_for_readme/ms2_responsive.png)
 
 
@@ -153,11 +155,12 @@ Title of the game
   5. Game levels section: 
      * Radio check buttons. 
      Responding on mouse click or finger touch on mobile devices. 
-     The Player can choose between  "Easy"- 3x3, "Medium"- 4x4, and "Hard"- 5x5 puzzle layout. 
-    
+     The Player can choose between  "Easy"- 3x3, "Medium"- 4x4, and "Hard"- 5x5 puzzle layout.   
 
-
-   ![Main Screen](assets/images/images_for_readme/ms2_main.png)
+<p align="center">
+   <img width="500" height="" src="assets/images/images_for_readme/ms2_main_screen.png">
+</p>
+  
    
 
 #### Puzzle complete display:
@@ -168,20 +171,30 @@ Title of the game
       Congratulation text. Time and amount of steps.
       Button "Play again" responding on mouse click or finger touch on mobile devices will bring the player back to the main screen.
 
+<p align="center">
+  <img width="500" height="" src="assets/images/images_for_readme/ms2_hooray.png">
+</p>
 
-
-  ![Puzzle completed Screen](assets/images/images_for_readme/ms2_hooray.png)
-
+  
 #### Mobile devices display
-#### Tablet display
-     
-* Red "Press the button to start the game" element show up instead of the game screen when screen size changing manually.
-  More information about it here  [Problems and Solutions](#problems)
+
+* Main display. Puzzle. Responding on finger touch.
+* Game-Control section. Responding on finger touch.
+  * Steps and Time display. The timer starts as soon as the game loaded.
+    Step count starts from the first move of the puzzle piece.
+  * <p><i class="fas fa-question"></i></p> 
+
   
-  
-  ![Mobile Screen](assets/images/images_for_readme/ms2_mobile_restart.png)
-  ![Game Winner](assets/images/images_for_readme/ms2_tablet.png)
-  ![Mobile Screen](assets/images/images_for_readme/ms2_mobile_gamecontrol.png)
+  <p align="center">
+  <img width="150"  m-5 height="" src="assets/images/images_for_readme/ms2_puzzle_mobile.png">
+   <img width="150" pl-2 height="" src="assets/images/images_for_readme/ms2_control_mobile.png">
+   <img width="150" p-2 height="" src="assets/images/images_for_readme/ms2_rules_mobile.png">
+   <img width="150" p-2 height="" src="assets/images/images_for_readme/ms2_form_mobile.png">
+</p>
+
+ #### Tablet display 
+
+  [Game Winner](assets/images/images_for_readme/ms2_tablet.png)
   
 
 
