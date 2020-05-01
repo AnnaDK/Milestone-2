@@ -1,4 +1,4 @@
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+ 
 
    # Interactive Frontend Development Milestone Project
 
@@ -143,14 +143,14 @@
       The user can renew a timer and start it from zero just clicking on the puzzle image button.
       Step count starts from the first move of the puzzle piece. <br/>
       
-      - <i class="fas fa-question"></i> - Rules. Modal window.
+      -  Rules. Modal window.
       Short explanation about the game.
       
-      - <i class="fas fa-star"></i> - Contact Us. Modal window.
+      -  Contact Us. Modal window.
         Contact form with 3 input fields. All fields are required. 
         After sending a form - the notification window appear. 
       
-      - <i class="fas fa-volume-up sound"></i> - Audio On/Off.
+      -  Audio On/Off.
         Allow users to make a sound on or off. The icon will change in response to the choice. 
       
       - Puzzle images section:
