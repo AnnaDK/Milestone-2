@@ -10,7 +10,7 @@
  ### Building the game with JS and jQuery.
  #### Tutorials, explanations and useful sources.
  * Aboul game building:<br>
- [Advanced JS: Games & Visualizations khanacademy. "www.khanacademy.org"](https://www.khanacademy.org/computing/computer-programming/programming-games-visualizations)
+ [Advanced JS: Games & Visualizations khanacademy. "www.khanacademy.org"](https://www.khanacademy.org/computing/computer-programming/programming-games-visualizations )
  
  * Learn how to make games, using nothing but HTML and JavaScript.<br>
  [How to buid a game. "www.w3schools.com"](https://www.w3schools.com/graphics/game_intro.asp)
