@@ -176,8 +176,8 @@
      **How this trouble look like** :
 
      <p align="center">
-     <img width="250"   height="" src="https://baeea74b-ae43-4641-b1fb-8ff472146de7.ws-eu01.gitpod.io/files/download/?id=32310681-3480-4f1e-b854-c12971b5dbe8">
-     <img width="150"  height="" src="https://baeea74b-ae43-4641-b1fb-8ff472146de7.ws-eu01.gitpod.io/files/download/?id=693528a2-1c55-4f02-b5db-52622559d35f">
+     <img width="250"   height="" src="assets/images/images_for_readme/ms2_restart_tablet.png">
+     <img width="150"  height="" src="assets/images/images_for_readme/ms2_problem.png">
      </p>
  
       -----------------------------------------------------------------
@@ -245,13 +245,36 @@
 
       **Problem- Not Fixed.**
 
----------------------------------------------------------------------------------------
+     ---------------------------------------------------------------------------------------
 
-# Real Time Testing.
+  6. **Problem jQuery touchPunch:**
 
-Asked my friends and family to check the web page on their devices.
-Play the game, send a message through the contact form. Press buttons a lot of times. Resize screen.
+      * **Problem:**
+       Draggable, Droppable functionality 
+       not workin in Firefox browser while using **Dev Tools**.
+       Here screen shot with the problem
+       [Screenshot](assets/images/images_for_readme/ms2_jQuery_touch_problem.png)
 
-**Feed back**.
+       
+
+
+     * **Solution:** 
+       I download Firefox browser on my Android mobile phone.
+       check - everything working.
+       
+
+      **Problem -  working on mobile devices, not workind in Dev Tools**
+
+
+  ----------------------------------------------------------------------
+
+
+
+ # Real Time Testing.
+
+ Asked my friends and family to check the web page on their devices.
+ Play the game, send a message through the contact form. Press buttons a lot of times. Resize screen.
+
+ **Feed back**.
  Game were checked on different mobile devices and descktops.
  Everything working apart of problems which were in description above.
