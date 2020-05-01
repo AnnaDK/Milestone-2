@@ -100,7 +100,7 @@
   * Open/Close .
   * Refresh.
   * Resize with browser window.
-  * Responsiveness with dev tools.
+  * Responsiveness with dev tools
 
   Design :
    
@@ -112,7 +112,7 @@
 
    Layout :
 
-   * Flex box is working and responsive.
+   * Flexbox is working and responsive.
    
    Game functionality:
     
@@ -127,12 +127,12 @@
 
  # Problems discovered
   
- 1. **Problems with responsivness of the Game field :**
+ 1. **Problems with the responsiveness of the Game field :**
      
      * **Problem:** <br>
-       The game field had a fixed width. It cost a problem with XS small screen sizes. 
-       Was not perfectly fitted in the frame. 
-
+       The game field has a fixed width. It cost a problem with XS small screen sizes. 
+       Was not perfectly fitted in the frame.
+    
      * **Solution:** <br> 
        Window.matchMedia() function added in game.js. 
        Code added in game.js for changing fixed width in a smaller size and build a game 
@@ -143,52 +143,55 @@
      ----------------------------
 
      * **Problem:**
-       After the previous problem was solved new problem appeared.
-       With changing screen size manually, puzzle field was loosing a square shape.
-       After page refreshing everything is ok.
-       When game load, no metter what size of screen- also everything ok.
+       After the previous problem was solved a new problem appeared. 
+       With changing screen size manually, the puzzle field was losing a square shape.
+       After page refreshing everything is ok. When game load, no matter what size of the screen- also everything ok
+       
+
 
      * **Solution:** 
-       If screen size changed manually - the "Restart-section" appear instead of the Game Field.
-       By pressing Play buttom user refreshing the page and Game field loading in the right size.
+       If screen size changed manually - the "Restart-section" appears instead of the Game Field. 
+       By pressing the Play button user refreshing the page and Game field loading in the right size.
 
       **Problem-Fixed.**
        
-       (I know it is not the best solution. But the best what I 
-       could achieve right now with my level of knowledge.
-       Mentioned in the section **Features Left to Implement** of the main readme.md file)
+       ((I know it is not the best solution. But the best what I could achieve right now with my level of knowledge. 
+       Mentioned in the section **Features Left to Implement** the main **readme.MD** file))
 
        -----------------------------------------
 
      * **Problem** :
-     
-      The previous problem still appear sometimes. With manual screen changing.
+       
+       The previous problem still appear sometimes. With manual screen changing.
       Most of the time while opening **Dev Tools**
-      After clicking on "Mobile-screen" sighn in the Dev-Tools, everything Ok.
+      After clicking on "Mobile-screen" sign in the Dev-Tools, everything Ok.
 
       * **Solution**:
+        
         Didn't found.
 
-        **Problem- Not Fixed.**
+     **Problem- Not Fixed.**
 
      ------------------------------------------
         
      **How this trouble look like** :
 
-     <p align="center">
-     <img width="250"   height="" src="assets/images/images_for_readme/ms2_restart_tablet.png">
-     <img width="150"  height="" src="assets/images/images_for_readme/ms2_problem.png">
-     </p>
- 
+     [Reset window](https://github.com/AnnaDK/Milestone-2/blob/72cf1264149c3b89f6979d8dc10bfeb3c5257e34/assets/images/images_for_readme/ms2_restart_tablet.png)
+
+     [Broken Puzzle](https://github.com/AnnaDK/Milestone-2/blob/72cf1264149c3b89f6979d8dc10bfeb3c5257e34/assets/images/images_for_readme/ms2_problem.png)
+
+
       -----------------------------------------------------------------
   
   2. **Problems with Contact-form  :**
 
       * **Problem:**
+       
        Contact-form nor resetting after been closed if it not sent.
        If to open it again input fields still have previously filled data
 
      * **Solution:** 
+       
        Function added in JS 
        to reset input fields.
 
@@ -199,9 +202,11 @@
   3. **Problem with Text and Box shadows :**
 
       * **Problem:**
+       
        Text and box shadows wasn't seen in IE and Safari browsers
 
      * **Solution:** 
+       
        Color system was changed
        From **rgb** in **hex**
 
@@ -212,11 +217,13 @@
  4. **Problems with Flex-box in IE and Firefox browsers:**
 
       * **Problem:**
+
        Flex-box layout which works perfectly in Google and Opera
-       was tottaly out of the way in IE and after problem was fixed, Game-control
-       section lost responsivness in Firefox
+       was totally out of the way in IE and after the problem was fixed, Game-control
+       section lost responsiveness in Firefox
 
      * **Solution:** 
+
        For fixing page in IE browser all flex parameters in style.css were changed to **flex : 1 0 0 ;**
        For Firefox : problem  and what must be changed was discovered with **Dev Tool**
        Advice about code to Implement this solution was found on [stackowerflow](https://stackoverflow.com/)
@@ -229,6 +236,7 @@
   5. **Problem with jQuery UI :**
 
       * **Problem:**
+
        Draggable, Droppable functionality sometimes stuck. 
        Cloned elements keep appearing.
        Happened not very often. On different devices. 
@@ -238,10 +246,11 @@
        After refreshing the page-  working OK
 
      * **Solution:** 
-       Try to search for solution or information.
-       Found mostly explanation of the same problem .
-       And references on problem with jQuery UI Interactions itself. 
-       Didn't find propper solution to use in my project now . 
+
+       Try to search for solutions or information.
+       I found mostly an explanation of the same problem.
+       And references on a problem with jQuery UI Interactions itself. 
+       I didn't find a proper solution to use in my project now.
 
       **Problem- Not Fixed.**
 
@@ -250,17 +259,15 @@
   6. **Problem jQuery touchPunch:**
 
       * **Problem:**
-       Draggable, Droppable functionality 
-       not workin in Firefox browser while using **Dev Tools**.
-       Here screen shot with the problem
-       [Screenshot](assets/images/images_for_readme/ms2_jQuery_touch_problem.png)
+
+       Draggable, Droppable functionality not working in the Firefox browser while using **Dev Tools**.
+       Here screenshot with the problem
+       [Screenshot](https://github.com/AnnaDK/Milestone-2/blob/72cf1264149c3b89f6979d8dc10bfeb3c5257e34/assets/images/images_for_readme/ms2_jQuery_touch_problem.png)
 
        
-
-
-     * **Solution:** 
+      * **Solution:** 
        I download Firefox browser on my Android mobile phone.
-       check - everything working.
+       check - everything is working.
        
 
       **Problem -  working on mobile devices, not workind in Dev Tools**
@@ -276,5 +283,6 @@
  Play the game, send a message through the contact form. Press buttons a lot of times. Resize screen.
 
  **Feed back**.
+
  Game were checked on different mobile devices and descktops.
  Everything working apart of problems which were in description above.

@@ -72,10 +72,10 @@
  ### [Developer Goals](#developer-goals)
 
  - Create the Second Milestone Project which meets requirements from Code Institute
- - Create the independent project after learning of JavaScript and  jQuery.
+ - Create an independent project after learning of JavaScript and jQuery.
  - More practise in HTML, CSS, JavaScript
- - The second  independent project in the portfolio of the developer
- - Create an interesting and functional game which is fun to play.
+ - The second independent project in the portfolio of the developer
+ - Create an interesting and functional game that is fun to play
 
  ### [User Stories](#user-stories)
 
@@ -150,8 +150,8 @@
         Contact form with 3 input fields. All fields are required. 
         After sending a form - the notification window appear. 
       
-      - <i class="fas fa-volume-up sound"></i> - Auio On/Off.
-        Allow user to make a sound on or off. The icon will change in response to the choice. 
+      - <i class="fas fa-volume-up sound"></i> - Audio On/Off.
+        Allow users to make a sound on or off. The icon will change in response to the choice. 
       
       - Puzzle images section:
         * Big buttons representing images of the puzzle. 
@@ -182,7 +182,7 @@
 
   1. **Game field** :
      Completed puzzle image. <br/>
-     New HTML element replacing game-control field.
+     New HTML element replacing the game-control field.
      "Winner" audio playing.<br/>
      Congratulation text. Time and amount of steps.<br/>
      Button "Play again" responding on mouse click or finger touch on mobile devices will bring the user back to the main screen.
@@ -285,8 +285,8 @@
  ## [Deployment](#deployment)
   
 
-   At first, this project was developed using Cloud9 IDE. Updates were committed to git. 
-  Then updates were pushed to GitHub,using the built in function within Cloud9, 
+   At first, this project was developed using the Cloud9 IDE. Updates were committed to git. 
+  Then updates were pushed to GitHub, using the built-in function within Cloud9, 
   where they were stored in a public directory.
   Committing and pushing updates were done through Cloud9 .
   After problems with Cloud9 service, losing my account and everything that wasn't pushed to Github (bad experience-good lesson) 
@@ -344,11 +344,11 @@
  * All other credits, references, and  sources are collected, organized and can be found in the document [references.md](assets/references/references.md)
   Hope it can help other students.
 
-  Special thanks to:
+  **Special thanks to:**
 
-  Code Institute Mentor Spencer Barriball for his help and support.
+   Code Institute Mentor Spencer Barriball for his help and support.
 
-  Code Institute Slack Community for shared experience.
+   Code Institute Slack Community for the shared experience.
 
  ## [Disclaimer](#disclamer)
 
